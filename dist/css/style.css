@@ -59,7 +59,9 @@ CirceBold,
 .percent-way__item span,
 .banner__title h2,
 .header__language .header__item .language__active,
-.header__nav .header__item a {
+.header__nav .header__item a,
+.main-title span,
+.main-title {
   font-family: "CirceBold", arial, sans-serif !important;
 }
 
@@ -154,6 +156,17 @@ ul {
   list-style-type: none;
 }
 
+.main-title {
+  font-size: 64px;
+  line-height: 74px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.main-title span {
+  color: #FF0000;
+}
+
 .decoration-first {
   position: absolute;
   bottom: -30%;
@@ -180,7 +193,7 @@ ul {
 
 .decoration-gradient-first {
   position: absolute;
-  top: -250%;
+  top: -145%;
   left: -80%;
   z-index: 1;
   pointer-events: none;
@@ -563,10 +576,47 @@ ul {
   color: #FF0000;
 }
 
+.about {
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.about-decoration {
+  position: absolute;
+  right: 2%;
+  top: 60%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.about__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.6875rem;
+  max-width: 75%;
+  padding-top: 2.9167rem;
+}
+
+.about__item p {
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.about__button {
+  padding-top: 3.875rem;
+}
+
 .percent-way {
   position: relative;
   width: 100%;
-  padding-top: 129px;
+  padding-top: 200px;
 }
 
 .no-webp .percent-way::before {
@@ -607,7 +657,7 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -724,7 +774,17 @@ ul {
   }
 }
 
+@media (max-width: 1600px) {
+  .about__list {
+    max-width: 60%;
+  }
+}
+
 @media (max-width: 1400px) {
+  .about__item p {
+    font-size: 20px;
+  }
+
   .percent-way__item span {
     left: 50px;
   }

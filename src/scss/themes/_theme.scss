@@ -38,6 +38,17 @@ a{
 ul{
     list-style-type: none;
 }
+.main-title {
+	font-size: 64px;
+	line-height: 74px;
+	text-transform: uppercase;
+	text-align: left;
+	@extend CirceBold;
+	span {
+		@extend CirceBold;
+		color: $primary;
+	}
+}
 .decoration-first {
 	position: absolute;
 	bottom: -30%;
@@ -61,7 +72,7 @@ ul{
 }
 .decoration-gradient-first {
 	position: absolute;
-	top: -250%;
+	top: -145%;
 	left: -80%;
 	z-index: 1;
     pointer-events: none;
