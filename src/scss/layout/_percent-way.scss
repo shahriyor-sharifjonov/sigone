@@ -10,8 +10,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(../img/banner-line.png);
-        background-repeat: no-repeat;
+        background: url(../img/banner-line.png) center / cover no-repeat;
         pointer-events: none;
     }
 
@@ -35,6 +34,10 @@
     }
 
     &__item {
+        max-width: 1440px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
         min-height: 170px;
         display: flex;
         align-items: center;

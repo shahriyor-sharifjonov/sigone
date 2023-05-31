@@ -20,7 +20,7 @@
     &__img {
         animation: slide-top 2s linear infinite alternate both;
         max-width: 100%;
-        height: calc(100vh - 150px);
+        max-height: calc(100vh - 150px);
         display: flex;
         align-items: center;
         justify-content: center;
