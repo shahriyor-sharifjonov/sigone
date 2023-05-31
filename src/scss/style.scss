@@ -18,6 +18,11 @@
     'base/reset',
     'base/typography';
 
+// themes
+@import 
+    'themes/theme',
+    'themes/admin';
+
 // layout
 @import 
     'layout/navigation',
@@ -26,6 +31,7 @@
     'layout/banner',
     'layout/footer',
     'layout/sidebar',
+    'layout/percent-way',
     'layout/forms';
 
 // components
@@ -38,7 +44,3 @@
 // pages
 @import 
     'pages/home';
-
-// themes
-@import 
-    'themes/theme'

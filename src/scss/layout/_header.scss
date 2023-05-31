@@ -49,10 +49,10 @@
             line-height: 175%;
             letter-spacing: 0.04em;
             text-transform: uppercase;
-            @extend CirceBold;
     
             a {
                 color: $white;
+                @extend CirceBold;
         
                 &:hover {
                     opacity: 0.7;

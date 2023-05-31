@@ -42,5 +42,10 @@
     "webp-converter": "2.2.3",
     "webpack": "^5.67.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "gsap": "^3.11.5",
+    "imagesloaded": "^5.0.0",
+    "smoothscroll-for-websites": "^1.4.10"
   }
 }

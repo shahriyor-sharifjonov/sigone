@@ -1,0 +1,78 @@
+.percent-way {
+    position: relative;
+    width: 100%;
+    padding-top: 129px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/banner-line.png);
+        background-repeat: no-repeat;
+        pointer-events: none;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+    }
+
+    &__content {
+        position: relative;
+        width: 90%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    &__item {
+        min-height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 80px;
+        transition: 300ms ease-out;
+        p {
+            font-size: 22px;
+            line-height: 140%;
+            margin-bottom: 0;
+            width: 60%;
+        }
+
+        span {
+            padding-top: 20px;
+            font-size: 120px;
+            color: $primary;
+            line-height: 94%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 300ms ease-out;
+            @extend CirceBold;
+            @include media(1400){
+                left: 50px;
+            }
+        }
+    }
+
+    &__item.active {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid #FFFFFF;
+        position: relative;
+        backdrop-filter: blur(8px);
+
+        span {
+            opacity: 1;
+            visibility: visible;
+            transition: 0.5s;
+        }
+    }
+}
