@@ -8,6 +8,10 @@
     color: $white;
     transition: 0.5s;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
     @extend CirceBold;
   
     &:hover {
@@ -31,7 +35,7 @@
         #FF0000;
     }
   
-    &:focus {
+    &:active {
         transform: scale(0.95);
     }
 }

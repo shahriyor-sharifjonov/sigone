@@ -1,7 +1,7 @@
 .percent-way {
     position: relative;
     width: 100%;
-    padding-top: 200px;
+    padding-top: 150px;
 
     &::before {
         content: "";
@@ -41,6 +41,7 @@
         justify-content: space-between;
         padding: 0 80px;
         transition: 300ms ease-out;
+        border: 1px solid transparent;
         p {
             font-size: 22px;
             line-height: 140%;
