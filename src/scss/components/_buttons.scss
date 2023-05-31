@@ -1,0 +1,37 @@
+//Кнопки
+.button__primary {
+    padding: 10px 35px;
+    min-width: 260px;
+    background: linear-gradient(180deg, #FF0000 -6.04%, #310000 139.01%), linear-gradient(180deg, #FF0000 -6.04%, #310000 115.93%), #FF0000;
+    font-size: 20px;
+    line-height: 30px;
+    color: $white;
+    transition: 0.5s;
+    text-align: center;
+    @extend CirceBold;
+  
+    &:hover {
+        color: $white;
+        transition: 0.5s;
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)
+        ),
+        linear-gradient(
+            180deg,
+            #FF0000 -6.04%,
+            #310000 139.01%
+        ),
+        linear-gradient(
+            180deg,
+            #FF0000 -6.04%,
+            #310000 115.93%
+        ),
+        #FF0000;
+    }
+  
+    &:focus {
+        transform: scale(0.95);
+    }
+}
