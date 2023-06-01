@@ -20,6 +20,20 @@ const updateProgress = (instance) => {
 //   loader.innerHTML = prc + "%";
 };
 
+window.addEventListener('scroll', function() {
+  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  console.log(scrollPosition);
+  if (scrollPosition > window.innerHeight / 3) {
+    console.log('if');
+    var element = document.querySelector('.footer__anchore');
+    element.classList.add('show');
+  } else {
+    console.log('else');
+    var element = document.querySelector('.footer__anchore');
+    element.classList.remove('show');
+  }
+});
+
 const showDemo = () => {
   setTimeout(() => {
     document.body.classList.add("loaded");

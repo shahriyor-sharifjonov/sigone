@@ -5,6 +5,7 @@
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     @extend GolosTextRegular;
+	scroll-behavior: smooth;
     &:focus,
     &:active{
         outline: none;
