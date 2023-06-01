@@ -34,6 +34,19 @@ window.addEventListener('scroll', function() {
   }
 });
 
+if (document.querySelector('.remove-picture')) {
+  var element = document.querySelector('.remove-picture');
+  
+  // Find the <picture> tag within the element
+  var pictureTag = element.querySelector('picture');
+  
+  // Get the parent element of <picture>
+  var parent = pictureTag.parentNode;
+
+  // Replace the <picture> tag with the <img> tag
+  parent.replaceChild(element.querySelector('img'), pictureTag);
+}
+
 const showDemo = () => {
   setTimeout(() => {
     document.body.classList.add("loaded");
@@ -138,7 +151,7 @@ const showDemo = () => {
     gsap.fromTo(
       ".course-banner__button",
       {
-        yPercent: -200,
+        yPercent: -100,
         ease: "none",
         duration: 2,
         scrollTrigger: {
@@ -147,7 +160,7 @@ const showDemo = () => {
         },
       },
       {
-        yPercent: 200,
+        yPercent: 100,
         ease: "none",
         duration: 2,
         scrollTrigger: {

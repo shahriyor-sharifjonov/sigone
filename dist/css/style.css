@@ -56,6 +56,10 @@
 
 CirceBold,
 .button__primary,
+.course-banner__button-item span,
+.course-banner__button-item,
+.course-banner__title h2 span,
+.course-banner__title h2,
 .footer-deskription__title h2,
 .license__title h2,
 .percent-way__item span,
@@ -677,7 +681,7 @@ ul {
 
 .footer .container {
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -815,7 +819,7 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 80px 0 35px;
+  padding: 80px 0 40px;
 }
 
 .footer__phone-number {
@@ -1442,6 +1446,107 @@ ul {
   text-align: center;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
+}
+
+.course-banner {
+  height: 100vh;
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #0A0A0B;
+}
+
+.course-banner .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.course-banner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.course-banner__even {
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+  max-width: 65%;
+}
+
+.course-banner__title {
+  padding-bottom: 38px;
+}
+
+.course-banner__title h2 {
+  font-size: 92px;
+  line-height: 89px;
+}
+
+.course-banner__title h2 span {
+  color: #FF0000;
+}
+
+.course-banner__text {
+  padding-bottom: 67px;
+}
+
+.course-banner__text p {
+  font-size: 26px;
+  line-height: 140%;
+}
+
+.course-banner__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.4167rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.course-banner__button-item {
+  font-size: 32px;
+  line-height: 47px;
+}
+
+.course-banner__button-item span {
+  color: #FF0000;
+}
+
+.course-banner__odd {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  max-width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.course-banner__img img {
+  width: 100%;
+  height: 100%;
 }
 
 .button__primary {

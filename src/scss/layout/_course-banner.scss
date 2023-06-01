@@ -1,0 +1,81 @@
+.course-banner {
+    // position: relative
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    background: #0A0A0B;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    &__even {
+        flex-basis: 65%;
+        max-width: 65%;
+    }
+
+    &__title {
+        padding-bottom: 38px;
+
+        h2 {
+            font-size: 92px;
+            line-height: 89px;
+            @extend CirceBold;
+
+            span {
+                color: $primary;
+                @extend CirceBold;
+            }
+        }
+    }
+
+    &__text {
+        padding-bottom: 67px;
+
+        p {
+            font-size: 26px;
+            line-height: 140%;
+        }
+    }
+
+    &__button {
+        display: flex;
+        gap: 1.4167rem;
+        align-items: center;
+
+        &-item {
+            font-size: 32px;
+            line-height: 47px;
+            @extend CirceBold;
+
+            span {
+                color: $primary;
+                @extend CirceBold;
+            }
+        }
+    }
+
+    &__odd {
+        flex-basis: 35%;
+        max-width: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__img {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
