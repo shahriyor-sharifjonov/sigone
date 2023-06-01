@@ -59,3 +59,50 @@
         padding: 0.6rem 2.5rem;
     }
 }
+
+.about-course {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    padding: 130px 0;
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.2;
+        }
+    }
+
+    &__headline {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    &__text {
+        p {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 0;
+            max-width: 933px;
+        }
+    }
+}

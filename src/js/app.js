@@ -142,7 +142,8 @@ const showDemo = () => {
         duration: 2,
         scrollTrigger: {
           trigger: about,
-          start: "-=300 50%",
+          start: "-=200 50%",
+          end: "=300 50%",
           scrub: true,
         },
       });
