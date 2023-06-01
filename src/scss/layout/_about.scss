@@ -264,17 +264,19 @@
         .swiper-pagination-bullet {
             background-color: $white;
             opacity: 0.5;
+            min-width: 13px;
             width: 13px;
             height: 13px;
             border-radius: 50%;
             // transition: 300ms ease-out;
-            // cursor: pointer;
+            cursor: pointer;
         }
 
         .swiper-pagination-bullet-active {
             opacity: 1;
             width: 20px;
             height: 20px;
+            min-width: 20px;
         }
 
         .swiper-slide-shadow-left {
@@ -328,6 +330,7 @@
         color: transparent;
         white-space: nowrap;
         @extend CirceBold;
+        pointer-events: none;
         -webkit-text-stroke: 1.5px #1B1B1C;
     }
 } 

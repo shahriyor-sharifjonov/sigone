@@ -1448,15 +1448,18 @@ ul {
 .speakers__swiper .swiper-pagination-bullet {
   background-color: #ffffff;
   opacity: 0.5;
+  min-width: 13px;
   width: 13px;
   height: 13px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .speakers__swiper .swiper-pagination-bullet-active {
   opacity: 1;
   width: 20px;
   height: 20px;
+  min-width: 20px;
 }
 
 .speakers__swiper .swiper-slide-shadow-left {
@@ -1515,6 +1518,7 @@ ul {
   z-index: -1;
   color: transparent;
   white-space: nowrap;
+  pointer-events: none;
   -webkit-text-stroke: 1.5px #1B1B1C;
 }
 
