@@ -56,6 +56,9 @@
 
 CirceBold,
 .button__primary,
+.leave__item,
+.leave__text span,
+.leave__text,
 .course-banner__button-item span,
 .course-banner__button-item,
 .course-banner__title h2 span,
@@ -134,6 +137,10 @@ body {
   color: #fff;
   width: 100%;
   overflow-x: hidden;
+}
+
+.about-page {
+  background: #0A0A0B;
 }
 
 .wrapper {
@@ -1454,7 +1461,6 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #0A0A0B;
 }
 
 .course-banner .container {
@@ -1547,6 +1553,114 @@ ul {
 .course-banner__img img {
   width: 100%;
   height: 100%;
+}
+
+.leave {
+  position: relative;
+  width: 100%;
+}
+
+.leave__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 6rem;
+  padding-bottom: 11.4167rem;
+  width: 100%;
+  position: relative;
+}
+
+.leave__content {
+  position: relative;
+  width: 90%;
+}
+
+.leave__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.leave__text {
+  font-size: 28px;
+  line-height: 41px;
+  margin-bottom: 0;
+  padding: 60px 0;
+  color: #ffffff;
+  width: 58%;
+}
+
+.leave__text span {
+  color: #FF0000;
+}
+
+.leave__item {
+  font-size: 42px;
+  line-height: 62px;
+  color: #FF0000;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.leave__link {
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  padding: 0 80px;
+  border: 1px solid transparent;
+}
+
+.leave__link a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.leave__link img {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.leave__link.active {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #FFFFFF;
+  position: relative;
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+
+.leave__link.active .leave__item {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.leave__link.active img {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 1;
 }
 
 .button__primary {
@@ -1664,6 +1778,22 @@ ul {
 
   .record .form__button {
     padding-top: 24px;
+  }
+
+  .leave__text {
+    font-size: 22px;
+    line-height: 160%;
+    max-width: 550px;
+    padding: 40px 0;
+  }
+
+  .leave__item {
+    font-size: 34px;
+    line-height: 140%;
+  }
+
+  .leave__link a {
+    gap: 30px;
   }
 }
 

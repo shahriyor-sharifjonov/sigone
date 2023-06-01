@@ -6,13 +6,15 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="css/style.min.css")
         title SigOne
-    body 
+    body.about-page
         .wrapper 
             include components/header
             +header
             main.main 
                 include components/course-banner
                 +course-banner 
+                include components/leave 
+                +leave 
             include components/footer
             +footer
         script(src="js/app.min.js") 

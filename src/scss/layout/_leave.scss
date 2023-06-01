@@ -1,0 +1,98 @@
+.leave {
+    position: relative;
+    width: 100%;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        padding-top: 6rem;
+        padding-bottom: 11.4167rem;
+        width: 100%;
+        position: relative;
+    }
+
+    &__content {
+        position: relative;
+        width: 90%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__text {
+        font-size: 28px;
+        line-height: 41px;
+        margin-bottom: 0;
+        padding: 60px 0;
+        color: $white;
+        width: 58%;
+        @extend CirceBold;
+        @include media(1400){
+            font-size: 22px;
+            line-height: 160%;
+            max-width: 550px;
+            padding: 40px 0;
+        }
+
+        span {
+            color: $primary;
+            @extend CirceBold;
+        }
+    }
+
+    &__item {
+        font-size: 42px;
+        line-height: 62px;
+        color: $primary;
+        opacity: 0;
+        transition: .5s;
+        @extend CirceBold;
+        @include media(1400){
+            font-size: 34px;
+            line-height: 140%;
+        }
+    }
+
+    &__link {
+        transition: 1s;
+        padding: 0 80px;
+        border: 1px solid transparent;
+
+        a {
+            display: flex;
+            gap: 5rem;
+            justify-content: space-around; 
+            align-items: center;
+            @include media(1400){
+                gap: 30px;
+            }
+        }
+
+        img {
+            transition: .5s;
+            opacity: 0;
+        }
+    }
+
+    &__link.active {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid #FFFFFF;
+        position: relative;
+        cursor: pointer;
+        backdrop-filter: blur(8px);
+
+        .leave__item {
+            opacity: 1;
+            transition: .5s;
+        }
+
+        img {
+            transition: .5s;
+            opacity: 1;
+        }
+    }
+} 
