@@ -8,17 +8,23 @@ html(lang="en")
         title SigOne
     body 
         .wrapper 
-            include components/header 
-            +header 
+            include components/header
+            +header
             main.main 
-                include components/banner 
-                +banner 
-                include components/percent-way 
+                include components/banner
+                +banner
+                include components/percent-way
                 +percent-way
-                include components/about 
+                include components/about
                 +about
-                include components/learn-more 
+                include components/learn-more
                 +learn-more
-            include components/footer 
+                include components/record
+                +record
+                include components/license
+                +license
+                include components/footer-description
+                +footer-description
+            include components/footer
             +footer
         script(src="js/app.min.js") 

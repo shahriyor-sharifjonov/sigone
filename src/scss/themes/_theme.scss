@@ -17,13 +17,17 @@ body{
 body{
     background: $black;
     color: #fff;
+	width: 100%;
+	overflow-x: hidden;
 }
 .wrapper{
     min-height: 100%;
     display: flex;
     flex-direction: column;
+	width: 100%;
     .main{
         flex: 1 1 auto;
+		width: 100%;
     }
 }
 button{
@@ -84,16 +88,16 @@ ul{
 }
 .decoration-gradient-second {
 	position: absolute;
-	left: 30%;
-	top: 10%;
+	left: -10%;
+	top: -30%;
 	z-index: -1;
-	width: 100%;
-	height: 100%;
+	width: 200%;
+	height: 200%;
     pointer-events: none;
 	img {
 		width: 100%;
 		height: 100%;
-		object-fit: cover;
+		object-fit: contain;
 	}
 }
 .decoration-gradient-third {

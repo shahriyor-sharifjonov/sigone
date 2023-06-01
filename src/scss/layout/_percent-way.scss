@@ -43,7 +43,6 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 80px;
-        transition: 300ms ease-out;
         border: 1px solid transparent;
         p {
             font-size: 22px;
@@ -59,7 +58,6 @@
             line-height: 94%;
             opacity: 0;
             visibility: hidden;
-            transition: 300ms ease-out;
             @extend CirceBold;
             @include media(1400){
                 left: 50px;
