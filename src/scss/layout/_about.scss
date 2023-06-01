@@ -42,3 +42,20 @@
         padding-top: 3.875rem;
     }
 }
+
+
+.about-secondary{
+    position: relative;
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+    .about__list{
+        @include media(1700){
+            max-width: 65%;
+        }
+    }
+
+    .button__primary{
+        padding: 0.6rem 2.5rem;
+    }
+}

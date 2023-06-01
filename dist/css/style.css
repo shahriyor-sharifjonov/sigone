@@ -287,7 +287,7 @@ ul {
   position: absolute;
   bottom: 0;
   right: 10%;
-  z-index: 1;
+  z-index: -3;
   pointer-events: none;
 }
 
@@ -980,6 +980,16 @@ ul {
   padding-top: 3.875rem;
 }
 
+.about-secondary {
+  position: relative;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.about-secondary .button__primary {
+  padding: 0.6rem 2.5rem;
+}
+
 .percent-way {
   position: relative;
   width: 100%;
@@ -1567,10 +1577,9 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 6rem;
-  padding-bottom: 11.4167rem;
   width: 100%;
   position: relative;
+  padding: 130px 0;
 }
 
 .leave__content {
@@ -1743,6 +1752,10 @@ ul {
 
   .about__list {
     max-width: 60%;
+  }
+
+  .about-secondary .about__list {
+    max-width: 65%;
   }
 }
 
