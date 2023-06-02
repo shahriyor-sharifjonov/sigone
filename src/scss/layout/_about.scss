@@ -43,7 +43,6 @@
     }
 }
 
-
 .about-secondary{
     position: relative;
     padding-top: 130px;
@@ -104,6 +103,7 @@
         }
     }
 }
+
 .advantages {
     position: relative;
     padding: 130px 0;
@@ -184,7 +184,6 @@
         }
     }
 }
-
 
 .speakers {
     position: relative;
@@ -971,6 +970,8 @@
 
 .reviews {
     padding: 130px 0;
+    width: 100%;
+    overflow: hidden;
 
     .main-title{
         margin-bottom: 70px;
@@ -1244,11 +1245,12 @@
     }
 
     &__price-title {
-        padding-bottom: 1rem;
-        padding-top: 5rem;
+        padding-bottom: 45px;
+        padding-top: 110px;
         h3 {
-            font-size: 2rem;
-            line-height: 2.2917rem;
+            font-size: 48px;
+            line-height: 55px;
+            margin-bottom: 0;
             text-transform: uppercase;
             @extend CirceBold;
         }
@@ -1257,13 +1259,14 @@
     &__price-num {
         padding-bottom: 0.75rem;
         span {
-            font-size: 1.875rem;
-            line-height: 2.1667rem;
+            font-size: 49.7041px;
+            line-height: 59px;
             @extend CirceBold;
         }
     }
 
     .price-sale {
+        padding: 10px;
         display: flex;
         align-items: center;
         text-decoration-line: line-through;
@@ -1279,34 +1282,39 @@
         width: max-content;
         span {
             font-size: 47px;
-            padding: 5px 10px 0;
+            padding: 16px 10px 10px 10px;
             line-height: 2rem;
             @extend CirceBold;
         }
     }
 
     &__title {
-        padding-bottom: 1.4583rem;
+        margin-bottom: 35px;
         .main-title {
             text-align: center;
-        }
-        h2 {
-            font-size: 2.2rem;
         }
     }
 
     &__form {
         background: #141414;
-        padding: 92px 102px 59px;
+        padding: 100px 100px 60px 100px;
+        @include media(1400){
+            padding: 50px 50px 30px 50px;
+        }
     }
 
     .form__col {
-        padding-bottom: 2.375rem;
+        &+.form__col{
+            padding-top: 50px;
+            @include media(1400){
+                padding-top: 20px;
+            }
+        }
 
         label {
-            font-size: 0.9167rem;
-            line-height: 100%;
-            margin-bottom: 0;
+            font-size: 22px;
+            line-height: 30px;
+            margin-bottom: 5px;
             @extend CirceBold;
         }
 
@@ -1316,17 +1324,15 @@
             border-radius: 0;
             background-color: transparent;
             color: $white;
-            padding: 0.75rem 0;
+            padding: 18px 0;
+            font-size: 16px;
+            line-height: 19px;
 
             &:focus {
                 box-shadow: none;
             }
 
             &::placeholder {
-                font-size: 0.6667rem;
-                line-height: 0.7917rem;
-                display: flex;
-                align-items: center;
                 color: #828282;
             } 
         }
@@ -1337,5 +1343,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 70px;
+        @include media(1400){
+            margin-top: 30px;
+        }
     }
 }

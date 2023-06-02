@@ -8493,6 +8493,7 @@ body {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   width: 100%;
+  overflow: hidden;
 }
 
 button {
@@ -10342,6 +10343,8 @@ ul {
 
 .reviews {
   padding: 130px 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .reviews .main-title {
@@ -10679,14 +10682,15 @@ ul {
 }
 
 .recording__price-title {
-  padding-bottom: 1rem;
-  padding-top: 5rem;
+  padding-bottom: 45px;
+  padding-top: 110px;
 }
 
 .recording__price-title h3,
 .recording__price-title .h3 {
-  font-size: 2rem;
-  line-height: 2.2917rem;
+  font-size: 48px;
+  line-height: 55px;
+  margin-bottom: 0;
   text-transform: uppercase;
 }
 
@@ -10695,11 +10699,12 @@ ul {
 }
 
 .recording__price-num span {
-  font-size: 1.875rem;
-  line-height: 2.1667rem;
+  font-size: 49.7041px;
+  line-height: 59px;
 }
 
 .recording .price-sale {
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10731,36 +10736,31 @@ ul {
 
 .recording__price-num-sale span {
   font-size: 47px;
-  padding: 5px 10px 0;
+  padding: 16px 10px 10px 10px;
   line-height: 2rem;
 }
 
 .recording__title {
-  padding-bottom: 1.4583rem;
+  margin-bottom: 35px;
 }
 
 .recording__title .main-title {
   text-align: center;
 }
 
-.recording__title h2,
-.recording__title .h2 {
-  font-size: 2.2rem;
-}
-
 .recording__form {
   background: #141414;
-  padding: 92px 102px 59px;
+  padding: 100px 100px 60px 100px;
 }
 
-.recording .form__col {
-  padding-bottom: 2.375rem;
+.recording .form__col + .form__col {
+  padding-top: 50px;
 }
 
 .recording .form__col label {
-  font-size: 0.9167rem;
-  line-height: 100%;
-  margin-bottom: 0;
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 5px;
 }
 
 .recording .form__col input {
@@ -10769,7 +10769,9 @@ ul {
   border-radius: 0;
   background-color: transparent;
   color: #ffffff;
-  padding: 0.75rem 0;
+  padding: 18px 0;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .recording .form__col input:focus {
@@ -10778,52 +10780,22 @@ ul {
 }
 
 .recording .form__col input::-webkit-input-placeholder {
-  font-size: 0.6667rem;
-  line-height: 0.7917rem;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
   color: #828282;
 }
 
 .recording .form__col input::-moz-placeholder {
-  font-size: 0.6667rem;
-  line-height: 0.7917rem;
-  display: flex;
-  align-items: center;
   color: #828282;
 }
 
 .recording .form__col input:-ms-input-placeholder {
-  font-size: 0.6667rem;
-  line-height: 0.7917rem;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
   color: #828282;
 }
 
 .recording .form__col input::-ms-input-placeholder {
-  font-size: 0.6667rem;
-  line-height: 0.7917rem;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
   color: #828282;
 }
 
 .recording .form__col input::placeholder {
-  font-size: 0.6667rem;
-  line-height: 0.7917rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: #828282;
 }
 
@@ -10838,6 +10810,7 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 70px;
 }
 
 .percent-way {
@@ -17967,6 +17940,18 @@ ul {
   .decorative__title .h2 {
     font-size: 96px;
     line-height: 120%;
+  }
+
+  .recording__form {
+    padding: 50px 50px 30px 50px;
+  }
+
+  .recording .form__col + .form__col {
+    padding-top: 20px;
+  }
+
+  .recording .form__button {
+    margin-top: 30px;
   }
 
   .percent-way__item span {
