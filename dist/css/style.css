@@ -8376,6 +8376,11 @@ CirceBold,
 .license__title h2,
 .license__title .h2,
 .percent-way__item span,
+.recording .form__col label,
+.recording__price-num-sale span,
+.recording__price-num span,
+.recording__price-title h3,
+.recording__price-title .h3,
 .reviews__info-name span,
 .education__redline-title span,
 .education__about-text span,
@@ -8404,6 +8409,8 @@ CirceRegular,
 }
 
 CirceExtraBold,
+.decorative__title h2,
+.decorative__title .h2,
 .education__about-number span,
 .expected-skills__info-num span,
 .expected-skills__circle-num span,
@@ -10609,6 +10616,228 @@ ul {
   width: 20px;
   height: 1px;
   background-color: #FF0000;
+}
+
+.decorative__headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.decorative__title {
+  text-align: center;
+}
+
+.decorative__title h2,
+.decorative__title .h2 {
+  font-size: 120px;
+  line-height: 136px;
+}
+
+.decorative__title_2 h2,
+.decorative__title_2 .h2 {
+  text-transform: uppercase;
+  color: transparent;
+  white-space: nowrap;
+  -webkit-text-stroke: 2px #ffffff;
+}
+
+.recording {
+  padding: 130px 0;
+}
+
+.recording .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.recording__even {
+  max-width: 40%;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.recording__odd {
+  max-width: 80%;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+}
+
+.recording__price-title {
+  padding-bottom: 1rem;
+  padding-top: 5rem;
+}
+
+.recording__price-title h3,
+.recording__price-title .h3 {
+  font-size: 2rem;
+  line-height: 2.2917rem;
+  text-transform: uppercase;
+}
+
+.recording__price-num {
+  padding-bottom: 0.75rem;
+}
+
+.recording__price-num span {
+  font-size: 1.875rem;
+  line-height: 2.1667rem;
+}
+
+.recording .price-sale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
+
+.recording__price-num-sale {
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid #FFFFFF;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.recording__price-num-sale span {
+  font-size: 47px;
+  padding: 5px 10px 0;
+  line-height: 2rem;
+}
+
+.recording__title {
+  padding-bottom: 1.4583rem;
+}
+
+.recording__title .main-title {
+  text-align: center;
+}
+
+.recording__title h2,
+.recording__title .h2 {
+  font-size: 2.2rem;
+}
+
+.recording__form {
+  background: #141414;
+  padding: 92px 102px 59px;
+}
+
+.recording .form__col {
+  padding-bottom: 2.375rem;
+}
+
+.recording .form__col label {
+  font-size: 0.9167rem;
+  line-height: 100%;
+  margin-bottom: 0;
+}
+
+.recording .form__col input {
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 0;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 0.75rem 0;
+}
+
+.recording .form__col input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.recording .form__col input::-webkit-input-placeholder {
+  font-size: 0.6667rem;
+  line-height: 0.7917rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  color: #828282;
+}
+
+.recording .form__col input::-moz-placeholder {
+  font-size: 0.6667rem;
+  line-height: 0.7917rem;
+  display: flex;
+  align-items: center;
+  color: #828282;
+}
+
+.recording .form__col input:-ms-input-placeholder {
+  font-size: 0.6667rem;
+  line-height: 0.7917rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #828282;
+}
+
+.recording .form__col input::-ms-input-placeholder {
+  font-size: 0.6667rem;
+  line-height: 0.7917rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #828282;
+}
+
+.recording .form__col input::placeholder {
+  font-size: 0.6667rem;
+  line-height: 0.7917rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #828282;
+}
+
+.recording .form__button {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .percent-way {
@@ -17732,6 +17961,12 @@ ul {
   .advantages__col-text p {
     font-size: 18px;
     line-height: 28px;
+  }
+
+  .decorative__title h2,
+  .decorative__title .h2 {
+    font-size: 96px;
+    line-height: 120%;
   }
 
   .percent-way__item span {

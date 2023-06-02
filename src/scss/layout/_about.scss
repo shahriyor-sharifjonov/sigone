@@ -1191,3 +1191,151 @@
         }
     }
 }
+
+.decorative {
+
+    &__headline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        text-align: center;
+        h2 {
+            font-size: 120px;
+            line-height: 136px;
+            @extend CirceExtraBold;
+            @include media(1400){
+                font-size: 96px;
+                line-height: 120%;
+            }
+        }
+    }
+
+    &__title_2 {
+        h2 {
+            text-transform: uppercase;
+            color: transparent;
+            white-space: nowrap;
+            -webkit-text-stroke: 2px $white;
+        }
+    }
+} 
+
+.recording {
+    padding: 130px 0;
+
+    .container {
+        display: flex;
+        gap: 3rem;
+        justify-content: space-between;
+    }
+
+    &__even {
+        max-width: 40%;
+        flex-basis: 40%;
+    }
+
+    &__odd {
+        max-width: 80%;
+        flex-basis: 80%;
+    }
+
+    &__price-title {
+        padding-bottom: 1rem;
+        padding-top: 5rem;
+        h3 {
+            font-size: 2rem;
+            line-height: 2.2917rem;
+            text-transform: uppercase;
+            @extend CirceBold;
+        }
+    }
+
+    &__price-num {
+        padding-bottom: 0.75rem;
+        span {
+            font-size: 1.875rem;
+            line-height: 2.1667rem;
+            @extend CirceBold;
+        }
+    }
+
+    .price-sale {
+        display: flex;
+        align-items: center;
+        text-decoration-line: line-through;
+    }
+
+    &__price-num-sale {
+        background: rgba(255, 255, 255, 0.1);
+        border: 0.5px solid #FFFFFF;
+        backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        span {
+            font-size: 47px;
+            padding: 5px 10px 0;
+            line-height: 2rem;
+            @extend CirceBold;
+        }
+    }
+
+    &__title {
+        padding-bottom: 1.4583rem;
+        .main-title {
+            text-align: center;
+        }
+        h2 {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__form {
+        background: #141414;
+        padding: 92px 102px 59px;
+    }
+
+    .form__col {
+        padding-bottom: 2.375rem;
+
+        label {
+            font-size: 0.9167rem;
+            line-height: 100%;
+            margin-bottom: 0;
+            @extend CirceBold;
+        }
+
+        input {
+            border: none;
+            border-bottom: 1px solid $white;
+            border-radius: 0;
+            background-color: transparent;
+            color: $white;
+            padding: 0.75rem 0;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &::placeholder {
+                font-size: 0.6667rem;
+                line-height: 0.7917rem;
+                display: flex;
+                align-items: center;
+                color: #828282;
+            } 
+        }
+    }
+
+    .form__button {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
