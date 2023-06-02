@@ -9475,7 +9475,8 @@ ul {
 
 .speakers .main-title {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  color: #fff;
 }
 
 .speakers__title {
@@ -9504,7 +9505,7 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
+  gap: 25px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -11018,6 +11019,7 @@ ul {
 .learn-more__arrow:after {
   position: absolute;
   bottom: 0;
+  left: 1px;
   content: "";
   display: block;
   margin: 0;
