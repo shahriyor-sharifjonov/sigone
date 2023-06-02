@@ -1,4 +1,5 @@
 import * as functions from "./modules/functions.js";
+import * as bootstrap from "bootstrap";
 
 functions.isWebp();
 

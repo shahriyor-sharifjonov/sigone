@@ -7,24 +7,28 @@ html(lang="en")
         link(rel="stylesheet", href="css/style.min.css")
         title SigOne
     body.about-page
-        .wrapper 
+        .wrapper
             include components/header
             +header
-            main.main 
+            main.main
                 include components/course-banner
-                +course-banner 
-                include components/leave 
-                +leave 
-                include components/about-secondary 
-                +about-secondary 
+                +course-banner
+                include components/leave
+                +leave
+                include components/about-secondary
+                +about-secondary
                 include components/about-course
                 +about-course
                 include components/advantages
                 +advantages
                 include components/privilege
                 +privilege
-                include components/speakers 
-                +speakers 
+                include components/speakers
+                +speakers
+                include components/training
+                +training
+                include components/skills
+                +skills
             include components/footer
             +footer
-        script(src="js/app.min.js")  
+        script(src="js/app.min.js")
