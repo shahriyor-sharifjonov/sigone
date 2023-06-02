@@ -9468,7 +9468,6 @@ ul {
 
 .speakers {
   position: relative;
-  padding-bottom: 130px;
   width: 100%;
   overflow: hidden;
 }
@@ -9635,6 +9634,7 @@ ul {
 
 .training-program {
   position: relative;
+  padding-top: 130px;
   padding-bottom: 130px;
 }
 
