@@ -9383,7 +9383,7 @@ ul {
 
 .advantages {
   position: relative;
-  padding: 130px 0;
+  padding-top: 130px;
 }
 
 .advantages__row {
@@ -9436,7 +9436,7 @@ ul {
 
 .privilege {
   position: relative;
-  padding: 0 0 130px 0;
+  padding-top: 130px;
 }
 
 .privilege__list {
@@ -9469,6 +9469,7 @@ ul {
 .speakers {
   position: relative;
   width: 100%;
+  padding-top: 130px;
   overflow: hidden;
 }
 

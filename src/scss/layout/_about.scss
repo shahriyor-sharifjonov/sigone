@@ -106,7 +106,7 @@
 
 .advantages {
     position: relative;
-    padding: 130px 0;
+    padding-top: 130px;
 
     &__row {
         display: flex;
@@ -165,7 +165,7 @@
 
 .privilege {
     position: relative;
-    padding: 0 0 130px 0;
+    padding-top: 130px;
 
     &__list {
         display: flex;
@@ -188,6 +188,7 @@
 .speakers {
     position: relative;
     width: 100%;
+    padding-top: 130px;
     overflow: hidden;
 
     .main-title {

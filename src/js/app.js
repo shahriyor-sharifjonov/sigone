@@ -21,6 +21,21 @@ const updateProgress = (instance) => {
 //   loader.innerHTML = prc + "%";
 };
 
+if(document.querySelector('.footer__anchore')){
+  const a = document.querySelector('.footer__anchore');
+  const cs = document.querySelectorAll('.leave__link a');
+  a.addEventListener('click', e => {
+    setTimeout(() => {
+      a.setAttribute('href', '#banner')
+    }, 1000)
+  })
+  cs.forEach(c => {
+    c.addEventListener('click', () => {
+      a.setAttribute('href', '#leave')
+    })
+  })
+}
+
 window.addEventListener('scroll', function() {
   var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
   if (scrollPosition > window.innerHeight / 3) {
