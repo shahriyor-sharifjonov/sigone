@@ -1233,11 +1233,12 @@
     .container {
         display: flex;
         gap: 3rem;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     &__even {
         max-width: 40%;
+        display: none;
         flex-basis: 40%;
     }
 
