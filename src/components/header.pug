@@ -1,6 +1,6 @@
 mixin header()
     header.header 
-        <div class="container">
+        .container
             <a href="index.html#banner" class="header__logo">
                 <img src="img/nav-logo.svg" alt="" draggable="false">
             </a>
@@ -32,4 +32,13 @@ mixin header()
                     </ul>
                 </div>
             </div>
-        </div>
+            button.header__btn 
+                span.header__btn-line
+        .header__menu 
+            .container 
+                button.header__btn 
+                    span.header__btn-line
+                p.header__menu-title Навигация
+                a(href="about.html#aboutSecondary").header__menu-link О трейдерах
+                a(href="about.html#banner").header__menu-link О курсе
+                a(href="about.html#trainingProgram").header__menu-link Программа

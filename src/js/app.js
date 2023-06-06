@@ -47,6 +47,32 @@ window.addEventListener('scroll', function() {
   }
 });
 
+const headerButton = document.querySelectorAll(".header__btn");
+const headerMenu = document.querySelector(".header__menu");
+let menuOpened = false;
+const menuToggle = () => {
+  menuOpened = !menuOpened;
+  headerButton.forEach(btn => {
+    btn.classList.toggle("open");
+  })
+  headerMenu.classList.toggle("open");
+};
+
+headerButton.forEach(btn => {
+  btn.onclick = menuToggle;
+})
+
+window.onclick = (e) => {
+  if (
+    menuOpened && (
+      headerButton.forEach(btn => {
+        !e.composedPath().includes(btn)
+      })
+    ) && !e.composedPath().includes(headerMenu)
+  )
+    menuToggle();
+};
+
 if (document.querySelector('.remove-picture')) {
   var element = document.querySelector('.remove-picture');
   

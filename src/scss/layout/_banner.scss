@@ -73,11 +73,23 @@
                 color: $primary;
                 @extend CirceExtraBold;
             }
+            @include media(1200){
+                font-size: 76px;
+            }
+            @include media(992){
+                font-size: 56px;
+            }
         }
         h2 {
             font-size: 92px;
             line-height: 115.4%;
             @extend CirceBold;
+            @include media(1200){
+                font-size: 76px;
+            }
+            @include media(992){
+                font-size: 56px;
+            }
         }
     }
 
@@ -102,6 +114,9 @@
             font-size: 20px;
             line-height: 120%;
             width: 100%;
+            @include media(1200){
+                font-size: 16px;
+            }
 
             span {
                 color: $primary;
