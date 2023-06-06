@@ -2,8 +2,6 @@
 
 // Шрифты
 @import "fonts";
-@import "node_modules/swiper/swiper";
-@import "node_modules/bootstrap/scss/bootstrap";
 
 // abstracts
 @import 
@@ -13,12 +11,13 @@
     'abstracts/placeholders';
 
 // vendors
-// @import 'vendors/bootstrap'
+@import 'vendors/swiper';
+@import 'vendors/bootstrap';
 
 // base
 @import 
     'base/reset',
-    'base/typography';
+    'base/typography'; 
 
 // themes
 @import 
@@ -34,6 +33,13 @@
     'layout/footer',
     'layout/sidebar',
     'layout/about',
+    'layout/advantages',
+    'layout/speakers', 
+    'layout/education',
+    'layout/reviews',
+    'layout/recording',
+    'layout/training-program',
+    'layout/expected-skills',
     'layout/percent-way',
     'layout/learn-more',
     'layout/record',
@@ -41,7 +47,7 @@
     'layout/footer-description',
     'layout/course-banner',
     'layout/leave',
-    'layout/forms';
+    'layout/forms'; 
 
 // components
 @import 

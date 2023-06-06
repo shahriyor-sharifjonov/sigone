@@ -1,0 +1,354 @@
+.expected-skills {
+    position: relative;
+    padding-bottom: 130px;
+
+    .main-title{
+        margin-bottom: 70px; 
+    }
+
+    .expected-skills-bg {
+        pointer-events: none;
+        .expected-skills-bg-primary {
+            position: absolute;
+            opacity: 1;
+            transition: .5s;
+            pointer-events: none;
+        }
+
+        .expected-skills-bg-white {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    .expected-skills-bg.active {
+        top: 60%;
+        left: 60%;
+
+        img {
+            object-fit: contain;
+        }
+
+        .expected-skills-bg-primary {
+            opacity: 0;
+        }
+
+        .expected-skills-bg-white {
+            opacity: 1;
+        }
+    }
+
+    .decoration-gradient-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__list {
+        position: relative;
+        height: 726px;
+        transition: all 1s;
+        will-change: transform;
+        display: flex;
+        align-items: center;
+
+        &.active {
+            transition: all 1s;
+            will-change: transform;
+            height: 500px;
+
+            .expected-skills__circle {
+                padding: 0px 5rem;
+                transition: all 1s;
+                width: 440px;
+                height: 440px;  
+                top: 50%;
+                transform: translateY(-50%);
+                right: 220px; 
+                will-change: transform;
+            }
+        }
+    }
+
+    &__circle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 3rem;
+        transition: all 1s;
+        will-change: transform;
+
+        &:hover {
+            scale: (1.05);
+            cursor: pointer;
+            will-change: transform;
+        }
+
+        &-num {
+            text-align: center;
+
+            span {
+                font-size: 155px;
+                line-height: 100%;
+                margin-bottom: 7px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: $white;
+                @extend CirceExtraBold;
+            }
+        }
+
+        &-title {
+            span {
+                letter-spacing: 2.97087px;
+                text-transform: capitalize;
+                line-height: 1rem;
+                @extend CirceBold; 
+            }
+        }
+
+        &-text {
+            span {
+                display: block;
+                line-height: 13px;
+                color: #DBDBDB; 
+                text-align: center;
+            }
+        }
+
+        &_1 {
+            background-color: #383838;
+            border-radius: 50%;
+            width: 389px;
+            height: 389px;
+            position: absolute;
+            top: 0;
+            right: 613px;
+            z-index: 2;
+
+            .expected-skills__circle-title {
+                margin-bottom: 2px;
+                span {
+                    font-size: 31.7137px;
+                    line-height: 36px;
+                }
+            }
+
+            .expected-skills__circle-text {
+                span {
+                    font-size: 15.1018px;
+                    line-height: 22px;
+                }
+            }
+        }
+
+        &_2 {
+            background-color: $primary;
+            border-radius: 50%;
+            width: 323px;
+            height: 323px;
+            position: absolute;
+            top: 70px;
+            right: 319px;
+            z-index: 3;
+
+            .expected-skills__circle-title {
+                margin-bottom: 2px;
+                span {
+                    font-size: 28.6933px;
+                    line-height: 27px;
+                }
+            }
+
+            .expected-skills__circle-text {
+                span {
+                    font-size: 13.5916px;
+                    line-height: 14px;
+                }
+            }
+        }
+
+        &_3 {
+            background-color: $white;
+            border-radius: 50%;
+            width: 411px;
+            height: 411px;
+            position: absolute;
+            top: 283px;
+            right: 466px;
+            z-index: 2;
+
+            .expected-skills__circle-title {
+                margin-bottom: 2px;
+                span {
+                    color: $black;
+                    font-size: 34.734px;
+                    line-height: 36px;
+                }
+            }
+
+            .expected-skills__circle-text {
+                span {
+                    color: $black;
+                    font-size: 15.1018px;
+                    line-height: 14px;
+                }
+            }
+        }
+
+        &_4 {
+            background-color: #818181;
+            border-radius: 50%;
+            width: 333px;
+            height: 333px;
+            position: absolute;
+            top: 300px;
+            right: 824px;
+            z-index: 1;
+
+            .expected-skills__circle-title {
+                margin-bottom: 2px;
+                span {
+                    font-size: 24.1628px;
+                    line-height: 27px;
+                }
+            }
+
+            .expected-skills__circle-text {
+                span {
+                    font-size: 13.5916px;
+                    line-height: 14px;
+                }
+            }
+        }
+
+        &_5 {
+            background-color: #660000;
+            border-radius: 50%;
+            width: 370px;
+            height: 370px;
+            position: absolute;
+            top: 355px;
+            right: 187px;
+            z-index: 0;
+            padding: 0 3.5rem;
+
+            .expected-skills__circle-title {
+                span {
+                    font-size: 24.1628px;
+                    line-height: 27px;
+                }
+            }
+
+            .expected-skills__circle-text {
+                span {
+                    font-size: 12.0814px;
+                    line-height: 14px;
+                }
+            }
+        }
+    }
+
+    &__info {
+        position: absolute;
+        scale: (0.5);
+        opacity: 0;
+        transition: all 1s;
+        width: 40%;
+        will-change: transform;
+
+        &-num {
+            position: absolute;
+            top: -10rem;
+            z-index: -1;
+
+            span {
+                font-size: 12.75rem;
+                color: transparent;
+                white-space: nowrap;
+                -webkit-text-stroke: 2px #1B1B1C;
+                @extend CirceExtraBold;
+            }
+        }
+
+        &-title {
+            margin-bottom: 43px;
+            font-size: 56px;
+            line-height: 55px;
+
+            span {
+                font-size: 56px;
+                line-height: 55px;
+                letter-spacing: 2.97087px;
+                text-transform: capitalize;
+                @extend CirceBold;
+            }
+        }
+
+        &-text {
+            span {
+                font-size: 20px;
+                line-height: 30px;
+                display: block; 
+                color: #DBDBDB;
+            }
+        }
+ 
+        &-button {
+            position: absolute;
+        }
+    }
+
+    &__item {
+        transition: all 1s;
+
+        &.active {
+            transition: all 1s;
+
+            .expected-skills__circle {
+                z-index: 10;
+                transition: all 1s;
+                width: 500px;
+                height: 500px; 
+                top: 50%;
+                transform: translateY(-50%);
+                right: 200px; 
+                
+                .expected-skills__circle-title{
+                    span{
+                        font-size: 46px;
+                        line-height: 120%; 
+                    }
+                }
+
+                .expected-skills__circle-text{
+                    span{
+                        font-size: 16px;
+                        line-height: 120%;
+                    }
+                }
+            } 
+
+            .expected-skills__info {
+                opacity: 1;
+                transition: all 1s;
+                scale: (1);
+                top: 50%; 
+                transform: translateY(-40%);
+            }
+        }
+    }
+}

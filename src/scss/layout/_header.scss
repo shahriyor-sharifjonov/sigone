@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  
+
     .container {
         display: flex;
         align-items: center;
@@ -17,7 +17,7 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
-  
+
     &__logo {
         width: 130px;
         line-height: 0;
@@ -27,13 +27,16 @@
             object-fit: cover;
         }
     }
-  
+
     &__left {
         display: flex;
         align-items: center;
         gap: 34px;
+        @include media(1200){
+            display: none; 
+        }
     }
-  
+
     &__nav {
         .header__list {
             display: flex;
@@ -42,14 +45,17 @@
             padding: 0;
             margin-bottom: 0;
             padding-right: 66px;
+            @include media(1200){
+                display: none;
+            }
         }
-  
+
         .header__item {
             font-size: 18px;
             line-height: 175%;
             letter-spacing: 0.04em;
             text-transform: uppercase;
-    
+
             a {
                 color: $white;
                 @extend CirceBold;
@@ -60,12 +66,12 @@
             }
         }
     }
-  
+
     &__button {
       display: flex;
       align-items: center;
     }
-  
+
     &__language {
         .header__list {
             padding: 0;
@@ -86,22 +92,22 @@
                 background-image: url('../img/line-language.svg');
             }
         }
-    
+
         .header__item {
             font-size: 16px;
             line-height: 175%;
             letter-spacing: 0.04em;
             text-transform: uppercase;
-    
+
             &:hover {
                 opacity: 0.7;
             }
-    
+
             a {
                 @extend CirceRegular;
                 color: #5B5B5B;
             }
-    
+
             .language__active {
                 color: $white;
                 @extend CirceBold;

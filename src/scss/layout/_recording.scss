@@ -1,0 +1,125 @@
+.recording {
+    padding: 130px 0;
+
+    .container {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+    }
+
+    &__even {
+        max-width: 40%;
+        display: none;
+        flex-basis: 40%;
+    }
+
+    &__odd {
+        max-width: 80%;
+        flex-basis: 80%;
+    }
+
+    &__price-title {
+        padding-bottom: 45px;
+        padding-top: 110px;
+        h3 {
+            font-size: 48px;
+            line-height: 55px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            @extend CirceBold;
+        }
+    }
+
+    &__price-num {
+        padding-bottom: 0.75rem;
+        span {
+            font-size: 49.7041px;
+            line-height: 59px;
+            @extend CirceBold;
+        }
+    }
+
+    .price-sale {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        text-decoration-line: line-through;
+    }
+
+    &__price-num-sale {
+        background: rgba(255, 255, 255, 0.1);
+        border: 0.5px solid #FFFFFF;
+        backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        span {
+            font-size: 47px;
+            padding: 16px 10px 10px 10px;
+            line-height: 2rem;
+            @extend CirceBold;
+        }
+    }
+
+    &__title {
+        margin-bottom: 35px;
+        .main-title {
+            text-align: center;
+        }
+    }
+
+    &__form {
+        background: #141414;
+        padding: 100px 100px 60px 100px;
+        @include media(1400){
+            padding: 50px 50px 30px 50px;
+        }
+    }
+
+    .form__col {
+        &+.form__col{
+            padding-top: 50px;
+            @include media(1400){
+                padding-top: 20px;
+            }
+        }
+
+        label {
+            font-size: 22px;
+            line-height: 30px;
+            margin-bottom: 5px;
+            @extend CirceBold;
+        }
+
+        input {
+            border: none;
+            border-bottom: 1px solid $white;
+            border-radius: 0;
+            background-color: transparent;
+            color: $white;
+            padding: 18px 0;
+            font-size: 16px;
+            line-height: 19px;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &::placeholder {
+                color: #828282;
+            } 
+        }
+    }
+
+    .form__button {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
+        @include media(1400){
+            margin-top: 30px;
+        }
+    }
+}

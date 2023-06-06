@@ -1,0 +1,81 @@
+.training-program {
+    position: relative;
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+    .accordion {
+        --bs-accordion-color: #212529;
+        --bs-accordion-bg: #0a0a0b;
+        --bs-accordion-border-color: transparent;
+        padding-top: 70px;
+    }
+
+    .accordion-item {
+        border: none;
+        border-top: 1px solid #DFDFDF;
+        border-radius: 0;
+        padding-bottom: 1.2917rem;
+        position: relative;
+    }
+ 
+    .accordion-button {
+        background-color: transparent;
+        padding: 1.2917rem 0 0.5rem;
+        font-size: 22px;
+        line-height: 27px;
+        position: relative;
+        /* or 123% */
+        color: $white;
+        @extend CirceBold;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &::after {
+            background-image: url(../img/plus.svg);
+            background-color: #100D0F;
+            border-radius: 50%;
+            padding: 8px;
+            width: 40px;
+            height: 40px;
+            background-position: center center;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-15px);
+        }
+
+        &:not(.collapsed)::after {
+            transform: translateY(-15px) rotate(45deg);
+        }
+    } 
+
+    .accordion-collapse {
+        border: none;
+    } 
+
+    .accordion-body {
+        padding: 0 0 0.5rem;
+        font-size: 16px;
+        line-height: 27px;
+        color: $white;
+        opacity: 0.9;
+        width: 90%;
+    }
+
+    .accordion-body-title {
+        font-size: 0.9167rem;
+        line-height: 1.125rem;
+        padding-bottom: 0.5rem;
+        color: $white;
+    }
+
+    .accordion-span {
+        font-size: 16px;
+        line-height: 22px;
+        color: #858585;
+        opacity: 0.7;
+        padding-bottom: 0.5rem;
+    } 
+}
