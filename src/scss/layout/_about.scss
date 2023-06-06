@@ -2,6 +2,10 @@
     position: relative;
     padding-top: 150px;
     padding-bottom: 150px;
+    @include media(576){
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
 
     .container{
         position: relative;
@@ -15,6 +19,9 @@
         @include media(1700){
             left: 64%;
         }
+        @include media(1200){
+            display: none;
+        }
     }
 
     &__list {
@@ -26,6 +33,13 @@
         @include media(1700){
             max-width: 60%;
         }
+        @include media(1200){
+            max-width: 100%;
+        }
+        @include media(576){
+            padding-top: 45px;
+            gap: 35px;
+        }
     }
 
     &__item {
@@ -34,6 +48,10 @@
             line-height: 120%;
             @include media(1400){
                 font-size: 20px;
+            }
+            @include media(576){
+                font-size: 16px;
+                line-height: 19px;
             }
         }
     }

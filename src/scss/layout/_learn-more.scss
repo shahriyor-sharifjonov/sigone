@@ -5,16 +5,34 @@
         justify-content: space-between;
         align-items: center;
         gap: 4rem;
+        position: relative;
     }
 
     &__even {
         flex-basis: 45%;
         max-width: 45%;
+        @include media(992){
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+        }
+        @include media(576){
+            left: calc(50% - 120px);
+            // transform: translateX(-20%);
+        }
     }
 
     &__odd {
         flex-basis: 55%;
         max-width: 55%;
+        @include media(992){
+            flex-basis: 100%;
+            max-width: 100%;
+            padding-bottom: 120px;
+        }
+        @include media(576){
+            padding-bottom: 60px;
+        }
     }
 
     &__img {
@@ -23,6 +41,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include media(992){
+            width: 150px;
+        }
+        @include media(576){
+            width: 100px;
+        }
         picture{
             max-width: 100%;
             width: 100%;
@@ -44,6 +68,13 @@
 
     &__button {
         padding-bottom: 2.9063rem;
+        @include media(992){
+            padding-bottom: 46px;
+        }
+        @include media(576){
+            display: flex;
+            justify-content: center;
+        }
     }
 
     &__scroll-down {
@@ -51,6 +82,12 @@
         gap: 48px;
         height: 5.125rem;
         position: relative;
+        @include media(992){
+            margin-left: 220px;
+        }
+        @include media(576){
+            margin-left: 50%;
+        }
 
         &::before {
             animation: elasticus 2s cubic-bezier(1, 0, 0, 1) infinite;

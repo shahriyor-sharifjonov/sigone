@@ -2,6 +2,9 @@
     position: relative;
     width: 100%;
     padding-top: 150px;
+    @include media(576){
+        padding-top: 70px;
+    }
 
     &::before {
         content: "";
@@ -42,13 +45,30 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 80px;
+        padding: 20px 80px;
         border: 1px solid transparent;
+        @include media(576){
+            min-height: 87px; 
+            width: calc(100% + 44px);
+            margin-left: -22px;
+            margin-right: -22px;
+            padding: 15px 20px;
+        }
         p {
             font-size: 22px;
             line-height: 140%;
             margin-bottom: 0;
             width: 60%;
+            opacity: 0.5;
+            @include media(992){
+                font-size: 18px;
+            }
+            @include media(768){
+                font-size: 16px;
+            }
+            @include media(400){
+                font-size: 14px;
+            }
         }
 
         span {
@@ -62,6 +82,16 @@
             @include media(1400){
                 left: 50px;
             }
+            @include media(992){
+                font-size: 90px;
+            }
+            @include media(768){
+                font-size: 46px;
+                padding-top: 10px;
+            }
+            @include media(400){
+                font-size: 42px;
+            }
         }
     }
 
@@ -70,6 +100,10 @@
         border: 1px solid #FFFFFF;
         position: relative;
         backdrop-filter: blur(8px);
+
+        p{
+            opacity: 1;
+        }
 
         span {
             opacity: 1;

@@ -43,6 +43,15 @@ mixin record()
                         <button class="button__primary" type="button">Отправить</button>
                     </div>
                 </form>
+                <form action="" class="record__sm">
+                    label(for="recordName").record__sm-label Полное Имя
+                    input(type="type" id="recordName" placeholder="Введите имя" required).record__sm-input 
+                    label(for="recordEmail").record__sm-label Email 
+                    input(type="email" id="recordEmail" placeholder="Введите email" required).record__sm-input 
+                    label(for="recordPhone").record__sm-label Номер телефона
+                    input(type="tel" id="recordPhone" placeholder="Введите номер" required).record__sm-input 
+                    button(type="submit").record__sm-btn Отправить
+                </form>
             </div>
         </div>
     </section>

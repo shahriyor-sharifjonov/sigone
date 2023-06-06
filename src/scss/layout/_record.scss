@@ -3,13 +3,30 @@
     overflow: hidden;
     height: 130vh;
     max-height: 1200px;
-    margin-top: 150px;
+    padding-top: 150px;
+    @include media(992){
+        height: max-content;
+        padding-bottom: 150px;
+    }
+    @include media(576){
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
 
     &__container {
         display: flex;
         align-items: flex-start;
         position: relative;
         gap: 3rem;
+        @include media(992){
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 720px;
+            padding: 0 15px;
+        }
+        @include media(768){
+            max-width: 540px;
+        }
     }
 
     &__even {
@@ -17,6 +34,9 @@
         flex-basis: 40%;
         display: flex;
         align-items: flex-end;
+        @include media(992){
+            display: none;
+        }
     }
 
     &__img{
@@ -38,10 +58,22 @@
             padding-right: 1rem;
             padding: 1rem 0;
         }
+        @include media(992){
+            max-width: 100%;
+            flex-basis: 100%;
+            padding: 0;
+            padding-left: 0;
+        }
     }
 
     &__title {
         padding-bottom: 13px;
+        @include media(576){
+            padding-bottom: 45px;
+            max-width: 260px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &__subtitle {
@@ -50,6 +82,9 @@
         width: 100%;
         @include media(1200){
             max-width: 372px;
+        }
+        @include media(576){
+            display: none;
         }
 
         p {
@@ -68,6 +103,47 @@
         gap: 32px;
         @include media(1400){
             gap: 16px;
+        }
+        @include media(576){
+            display: none;
+        }
+    }
+
+    &__sm{
+        display: none;
+        @include media(576){
+            display: flex;
+            flex-direction: column;
+        }
+        &-label{
+            font-size: 17px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.198411px;
+            color: #FFFFFF; 
+            &~.record__sm-label{
+                margin-top: 45px;
+            }           
+        }
+        &-input{
+            padding: 10px 0;
+            border: none;
+            border-bottom: 0.620034px solid #D8D8D8;
+            background: none;
+        }
+        &-btn{
+            margin-top: 45px;
+            width: 100%;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, #FF0000 -6.04%, #310000 139.01%), linear-gradient(90.13deg, #FF0000 0.12%, #4B4B4B 99.91%), #FF0000;
+            font-size: 18px;
+            line-height: 27px;
+            @extend CirceBold;
+            color: #FFFFFF;
         }
     }
 
