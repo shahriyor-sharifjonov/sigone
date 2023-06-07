@@ -1,5 +1,8 @@
 .footer-deskription {
     padding: 130px 0;
+    @include media(576){
+        padding: 70px 0 0 0;
+    }
 
     .container {
         display: flex;
@@ -7,6 +10,21 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @include media(576){
+            gap: 40px;
+        }
+    }
+
+    &__logo{
+        @include media(576){
+            display: none;
+        }
+        &.sm{
+            display: none;
+            @include media(576){
+                display: block;
+            }
+        }
     }
 
     &__title {
@@ -17,6 +35,10 @@
             letter-spacing: 0.1rem;
             text-transform: uppercase;
             @extend CirceBold;
+            @include media(576){
+                font-size: 28px;
+                max-width: 300px;
+            }
         }
     }
 }

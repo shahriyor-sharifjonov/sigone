@@ -5,6 +5,14 @@
     max-height: calc(100vh - 100px);
     min-height: 600px;
     display: flex;
+    @include media(992){
+        max-height: max-content;
+        padding: 150px 0;
+        min-height: 0;
+    }
+    @include media(576){
+        padding: 70px 0;
+    }
 
     .container {
         display: flex;
@@ -16,12 +24,24 @@
         flex-basis: 50%;
         width: 50%;
         min-width: 687px;
+        @include media(992){
+            width: 100%;
+            flex-basis: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 0;
+        }
     }
 
     &__odd { 
         flex-basis: 50%;
         max-width: 50%;
         height: 100%;
+        @include media(992){
+            display: none;
+        }
+
     }
 
     &__img{
@@ -30,6 +50,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include media(992){
+            display: none;
+        }
+        &.sm{
+            display: none;
+            @include media(992){
+                display: flex;
+            }
+        }
         img{
             max-width: 100%;
             max-height: 100%;
@@ -41,10 +70,24 @@
 
     &__title {
         padding-bottom: 1.875rem;
+        @include media(992){
+            text-align: center;
+            padding-bottom: 11px;
+        }
 
         h2 {
             color: #181818;
             @extend CirceBold;
+            @include media(992){
+                text-align: center;
+            }
+            @include media(768){
+                font-size: 46px;
+            }
+            @include media(576){
+                font-size: 28px;
+                line-height: 120%;
+            }
 
             span {
                 color: $primary;

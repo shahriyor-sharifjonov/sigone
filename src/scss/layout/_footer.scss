@@ -1,6 +1,5 @@
 .footer {
     position: relative;
-    background-color: #181818;
 
     .container {
         padding-top: 70px;
@@ -24,6 +23,13 @@
         opacity: 0;
         visibility: hidden;
         transition: 300ms ease-out;
+        @include media(576){
+            bottom: 20px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+        }
         &.show{
             opacity: 1;
             visibility: visible;
@@ -38,6 +44,22 @@
         display: flex;
         justify-content: space-between;
         gap: 2rem;
+        @include media(992){
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+    }
+
+    &__col{
+        @include media(992){
+            width: calc(50% - 20px);
+        }
+        @include media(768){
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__title {
@@ -61,6 +83,9 @@
         line-height: 22px;
         color: $white;
         opacity: 0.5;
+        @include media(768){
+            text-align: center;
+        }
         &+.footer__text{
             margin-top: 4px;
         }
@@ -85,6 +110,15 @@
         }
     }
 
+    &__map{
+        @include media(768){
+            width: 100%;
+            iframe{
+                width: 100%;
+            }
+        }
+    }
+
     &__address {
         display: flex;
         flex-direction: column;
@@ -98,6 +132,11 @@
     }
 
     &__item {
+        @include media(768){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         &+.footer__item{
             margin-top: 13px;
         }
@@ -111,17 +150,36 @@
         display: flex;
         justify-content: space-between;
         padding: 80px 0 40px;
+        @include media(1200){
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+        }
     }
 
     &__phone-number {
         display: flex;
         gap: 20px;
         align-items: center;
+        @include media(576){
+            gap: 10px;
+        }
 
         a {
             font-size: 42px;
             line-height: 37px;
             @extend CirceBold;
+            @include media(576){
+                font-size: 28px;
+                line-height: 37px;
+            }
+        }
+
+        img{
+            @include media(576){
+                width: 25px;
+                height: 25px;
+            }
         }
     }
 
@@ -130,9 +188,20 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include media(768){
+            border-top: none;
+        }
+        @include media(576){
+            max-width: 120px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         a {
             padding-top: 35px;
+            @include media(576){
+                padding-top: 0;
+            }
         }
 
         img {
@@ -147,11 +216,17 @@
         justify-content: center;
         align-items: center;
         padding-top: 35px;
+        @include media(576){
+            padding-top: 13px;
+        }
 
         span {
             font-size: 22px;
             line-height: 22px;
             color: rgba(97, 90, 90, 0.7);
+            @include media(576){
+                font-size: 14px;
+            }
         }
     }
 }
