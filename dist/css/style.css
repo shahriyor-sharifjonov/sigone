@@ -1009,11 +1009,11 @@ body {
   color: #fff;
   width: 100%;
   overflow-x: hidden;
-  background: #0C0C0E;
+  background: #0c0c0e;
 }
 
 .about-page {
-  background: #0D0B0F;
+  background: #0c0c0e;
 }
 
 .wrapper {
@@ -2649,6 +2649,10 @@ ul {
   max-width: 35%;
 }
 
+.reviews__img {
+  width: 100%;
+}
+
 .reviews__img img {
   width: 100%;
   height: 100%;
@@ -2769,6 +2773,11 @@ ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 10;
+  pointer-events: none;
+}
+
+.reviews__swiper-button > * {
+  pointer-events: all;
 }
 
 .reviews__swiper-button-bg:nth-child(1) .reviews__swiper-button-border {
@@ -4384,6 +4393,10 @@ ul {
     line-height: 28px;
   }
 
+  .reviews__even-quotes {
+    display: none;
+  }
+
   .recording__form {
     padding: 50px 50px 30px 50px;
   }
@@ -4495,8 +4508,63 @@ ul {
     max-width: 100%;
   }
 
+  .decorative {
+    display: none;
+  }
+
   .record__subtitle {
     max-width: 372px;
+  }
+
+  .no-webp .course-banner {
+    background-image: url("../img/course-banner-bg.png"); }
+
+  .course-banner {
+    background-position: center calc(50% + 100px);
+    background-size: auto;
+    background-repeat: no-repeat;
+    isolation: isolate;
+  }
+
+  .course-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 12, 14, 0.62);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    z-index: -1;
+  }
+
+  .course-banner__even {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .course-banner__title h2 {
+    text-align: center;
+  }
+
+  .course-banner__text p {
+    text-align: center;
+  }
+
+  .course-banner__odd {
+    display: none;
   }
 }
 
@@ -4540,6 +4608,19 @@ ul {
 
   .footer__col {
     width: calc(50% - 20px);
+  }
+
+  .reviews__img img {
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .reviews__even-border {
+    display: none;
+  }
+
+  .reviews__info-text p {
+    font-size: 18px;
   }
 
   .percent-way__item p {
@@ -4701,6 +4782,16 @@ ul {
     border-top: none;
   }
 
+  .reviews__info-text p {
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .reviews__swiper-pagination {
+    margin-top: 40px;
+    gap: 5px;
+  }
+
   .percent-way__item p {
     font-size: 16px;
   }
@@ -4716,6 +4807,37 @@ ul {
 
   .license__title h2 {
     font-size: 46px;
+  }
+
+  .course-banner__title {
+    padding-bottom: 12px;
+  }
+
+  .course-banner__title h2 {
+    font-size: 48px;
+    line-height: 43px;
+  }
+
+  .course-banner__text {
+    padding-bottom: 65px;
+  }
+
+  .course-banner__text p {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .course-banner__button {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+
+  .course-banner__button-item {
+    font-size: 18px;
+    line-height: 27px;
   }
 }
 
@@ -4801,6 +4923,100 @@ ul {
   .about__item p {
     font-size: 16px;
     line-height: 19px;
+  }
+
+  .reviews {
+    padding: 70px 0 0 0;
+  }
+
+  .reviews .main-title {
+    margin-bottom: 40px;
+  }
+
+  .reviews__body {
+    gap: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .reviews__even {
+    width: 180px;
+    max-width: 180%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .reviews__odd {
+    max-width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .reviews__info-text {
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .reviews__swiper .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
+
+  .reviews__swiper .swiper-pagination-bullet-active {
+    width: 9px;
+    height: 9px;
+  }
+
+  .reviews__swiper-button {
+    width: 100%;
+    display: none;
+  }
+
+  .reviews__info-name {
+    -webkit-box-ordinal-group: -1;
+        -ms-flex-order: -2;
+            order: -2;
+  }
+
+  .reviews__info-profession {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-bottom: 25px;
+  }
+
+  .recording {
+    padding: 70px 0 0 0;
+  }
+
+  .recording__odd {
+    max-width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .recording__form {
+    max-width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 50px 15px;
   }
 
   .percent-way {
@@ -4899,6 +5115,10 @@ ul {
     font-size: 28px;
     max-width: 300px;
   }
+
+  .course-banner {
+    max-height: 560px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -4912,3 +5132,8 @@ ul {
 }
 
 .webp .percent-way::before { background: url(../img/banner-line.webp) center/cover no-repeat; }
+
+@media (max-width: 1200px) {
+
+  .webp .course-banner { background-image: url(../img/course-banner-bg.webp); }
+}

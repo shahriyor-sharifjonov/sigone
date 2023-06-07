@@ -145,6 +145,9 @@
 } 
 
 .decorative {
+    @include media(1200){
+        display: none;
+    }
 
     &__headline {
         display: flex;

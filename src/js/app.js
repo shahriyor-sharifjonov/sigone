@@ -188,27 +188,29 @@ const showDemo = () => {
       });
     });
 
-    gsap.fromTo(
-      ".course-banner__button",
-      {
-        yPercent: -100,
-        ease: "none",
-        duration: 2,
-        scrollTrigger: {
-          trigger: ".course-banner__button",
-          scrub: true,
+    matchMedia.add("(min-width: 1200px)", () => {
+      gsap.fromTo(
+        ".course-banner__button",
+        {
+          yPercent: -100,
+          ease: "none",
+          duration: 2,
+          scrollTrigger: {
+            trigger: ".course-banner__button",
+            scrub: true,
+          },
         },
-      },
-      {
-        yPercent: 100,
-        ease: "none",
-        duration: 2,
-        scrollTrigger: {
-          trigger: ".course-banner__button",
-          scrub: true,
-        },
-      }
-    );
+        {
+          yPercent: 100,
+          ease: "none",
+          duration: 2,
+          scrollTrigger: {
+            trigger: ".course-banner__button",
+            scrub: true,
+          },
+        }
+      );
+    })
 
     matchMedia.add("(max-width: 2500px) and (min-width: 993px)", () => {});
   })();

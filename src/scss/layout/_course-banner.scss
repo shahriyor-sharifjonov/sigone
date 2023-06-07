@@ -4,6 +4,29 @@
     display: flex;
     position: relative;
 
+    @include media(1200){
+        background-image: url('../img/course-banner-bg.png');
+        background-position: center calc(50% + 100px);
+        background-size: auto;
+        background-repeat: no-repeat;
+        isolation: isolate;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(12, 12, 14, 0.62);
+            backdrop-filter: blur(2px);
+            z-index: -1;
+        }
+    }
+
+    @include media(576){
+        max-height: 560px;
+    }
+
     .container {
         display: flex;
         align-items: center;
@@ -19,15 +42,33 @@
     &__even {
         flex-basis: 65%;
         max-width: 65%;
+        @include media(1200){
+            flex-basis: 100%;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__title {
         padding-bottom: 38px;
+        @include media(768){
+            padding-bottom: 12px;
+        }
 
         h2 {
             font-size: 92px;
             line-height: 89px;
             @extend CirceBold;
+            @include media(768){
+                font-size: 48px;
+                line-height: 43px;
+            }
+
+            @include media(1200){
+                text-align: center;
+            }
 
             span {
                 color: $primary;
@@ -38,10 +79,22 @@
 
     &__text {
         padding-bottom: 67px;
+        @include media(768){
+            padding-bottom: 65px;
+        }
 
         p {
             font-size: 26px;
             line-height: 140%;
+
+            @include media(1200){
+                text-align: center;
+            }
+
+            @include media(768){
+                font-size: 16px;
+                line-height: 19px;
+            }
         }
     }
 
@@ -50,10 +103,19 @@
         gap: 1.4167rem;
         align-items: center;
 
+        @include media(768){
+            flex-direction: column;
+            gap: 15px;
+        }
+
         &-item {
             font-size: 32px;
             line-height: 47px;
             @extend CirceBold;
+            @include media(768){
+                font-size: 18px;
+                line-height: 27px;
+            }
 
             span {
                 color: $primary;
@@ -68,6 +130,9 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        @include media(1200){
+            display: none;
+        }
     }
 
     &__img {
