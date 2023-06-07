@@ -66,11 +66,14 @@
     padding-top: 130px;
     padding-bottom: 130px;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
 
     .about__list{
         @include media(1700){
             max-width: 65%;
+        }
+        @include media(992){
+            max-width: 100%;
         }
     }
 }

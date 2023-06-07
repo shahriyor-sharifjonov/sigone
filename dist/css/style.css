@@ -59,6 +59,7 @@ CirceBold,
 .leave__item,
 .leave__text span,
 .leave__text,
+.leave__title,
 .course-banner__button-item span,
 .course-banner__button-item,
 .course-banner__title h2 span,
@@ -2025,7 +2026,6 @@ ul {
   padding-top: 130px;
   padding-bottom: 130px;
   width: 100%;
-  overflow: hidden;
 }
 
 .about-course {
@@ -4178,6 +4178,11 @@ ul {
 .leave {
   position: relative;
   width: 100%;
+  padding: 130px 0;
+}
+
+.leave__title {
+  display: none;
 }
 
 .leave__container {
@@ -4189,7 +4194,6 @@ ul {
           justify-content: center;
   width: 100%;
   position: relative;
-  padding: 130px 0;
 }
 
 .leave__content {
@@ -4566,6 +4570,34 @@ ul {
   .course-banner__odd {
     display: none;
   }
+
+  .leave__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 56px;
+    line-height: 120%;
+    color: #FF0000;
+    margin-bottom: 45px;
+  }
+
+  .leave__item {
+    display: none;
+  }
+
+  .leave__link {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -4608,6 +4640,10 @@ ul {
 
   .footer__col {
     width: calc(50% - 20px);
+  }
+
+  .about-secondary .about__list {
+    max-width: 100%;
   }
 
   .reviews__img img {
@@ -4839,6 +4875,20 @@ ul {
     font-size: 18px;
     line-height: 27px;
   }
+
+  .leave__text {
+    width: 80%;
+  }
+
+  .leave__link a {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .leave__link img {
+    width: 40px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -4873,8 +4923,8 @@ ul {
   .footer__anchore {
     bottom: 20px;
     right: 15px;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     padding: 10px;
   }
 
@@ -5118,6 +5168,32 @@ ul {
 
   .course-banner {
     max-height: 560px;
+  }
+
+  .leave {
+    padding: 70px 0 0 0;
+  }
+
+  .leave__title {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+
+  .leave__text {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 20px 0;
+  }
+
+  .leave__text span {
+    color: #fff;
+  }
+
+  .leave__link {
+    width: 112%;
+    margin-left: -6%;
+    margin-right: -6%;
   }
 }
 

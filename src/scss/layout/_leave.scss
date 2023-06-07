@@ -1,13 +1,39 @@
 .leave {
     position: relative;
     width: 100%;
+    padding: 130px 0;
+    @include media(576){
+        padding: 70px 0 0 0;
+    }
+
+    &__title{
+        display: none;
+        @extend CirceBold;
+        @include media(1200){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-size: 56px;
+            line-height: 120%;
+            color: #FF0000;
+            margin-bottom: 45px;
+        }
+        @include media(576){
+            font-size: 28px;
+            line-height: 32px;
+            margin-bottom: 20px;
+        }
+    }
 
     &__container {
         display: flex;
         justify-content: center;
         width: 100%;
         position: relative;
-        padding: 130px 0;
     }
 
     &__content {
@@ -36,10 +62,21 @@
             max-width: 550px;
             padding: 40px 0;
         }
+        @include media(768){
+            width: 80%;
+        }
+        @include media(576){
+            font-size: 16px;
+            line-height: 19px;
+            padding: 20px 0;
+        }
 
         span {
             color: $primary;
             @extend CirceBold;
+            @include media(576){
+                color: #fff;
+            }
         }
     }
 
@@ -54,12 +91,23 @@
             font-size: 34px;
             line-height: 140%;
         }
+        @include media(1200){
+            display: none;
+        }
     }
 
     &__link {
         transition: 1s;
         padding: 0 80px;
         border: 1px solid transparent;
+        @include media(1200){
+            padding: 0 20px; 
+        }
+        @include media(576){
+            width: calc(112%);
+            margin-left: -6%;
+            margin-right: -6%;
+        }
 
         a {
             display: flex;
@@ -69,11 +117,17 @@
             @include media(1400){
                 gap: 30px;
             }
+            @include media(768){
+                justify-content: space-between;
+            }
         }
 
         img {
             transition: .5s;
             opacity: 0;
+            @include media(768){
+                width: 40px;
+            }
         }
     }
 
