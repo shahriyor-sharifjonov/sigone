@@ -6,17 +6,27 @@
         justify-content: space-between;
         padding-top: 2.9167rem;
         position: relative;
+        @include media(576){
+            padding-top: 0;
+        }
     }
   
     &__even {
         flex-basis: 30%;
         max-width: 30%;
+        @include media(1350){
+            flex-basis: 100%;
+            max-width: 100%;
+        }
     }
 
     &__about {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 3.2083rem 2.75rem;
+        @include media(576){
+            grid-gap: 0;
+        }
         &-item {
             position: relative;
             width: 100%;
@@ -50,6 +60,9 @@
                 white-space: nowrap;
                 -webkit-text-stroke: 1px #4E4E4E;
                 @extend CirceExtraBold;
+                @include media(576){
+                    font-size: 98px;
+                }
             }
         }
 
@@ -69,6 +82,10 @@
                 line-height: 34px;
                 text-transform: capitalize;
                 @extend CirceBold;
+                @include media(576){
+                    font-size: 14px;
+                    line-height: 17px;
+                }
             }
         }
     }
@@ -105,6 +122,29 @@
         border-radius: 1000px 0px 0px 1000px;
         padding: 3.4583rem 0 3.4583rem 5rem;
         width: 55%;
+        @include media(1350){
+            position: relative;
+            margin-top: 100px;
+            width: 100%;
+            top: 0;
+            transform: translateY(0);
+        }
+        @include media(768){
+            height: 100px;
+            padding: 0;
+            padding-left: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        @include media(576){
+            width: calc(100% + 100px);
+            margin-left: -80px;
+            padding-left: 105px;
+            margin-right: -20px;
+        
+        }
 
         &::after {
             content: "";
@@ -118,6 +158,9 @@
             background-repeat: no-repeat;
             background-position: left center;
             pointer-events: none;
+            @include media(576){
+                background-position: 30px center;
+            }
         }
 
         &-img {
@@ -126,12 +169,29 @@
             right: 1.5rem;
             transform: translate(0, -50%);
             z-index: -1;
+            @include media(768){
+                right: -15px;
+            }
+            @include media(576){
+                width: 150px;
+                right: 15px;
+            }
+            @include media(420){
+                width: 100px;
+                height: 100px;
+            }
+            @include media(360){
+                display: none;
+            }
 
             img {
                 width: 100%;
                 height: 100%;
                 max-width: 12.5rem;
                 object-fit: cover;
+                @include media(420){
+                    object-fit: contain;
+                }
             }
         }
 
@@ -139,8 +199,23 @@
             position: absolute;
             right: 23%;
             top: 37%;
-            z-index: 1;
             z-index: -1;
+            @include media(1350){
+                bottom: -100px;
+                top: auto;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            @include media(768){
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                bottom: -60px;
+                height: 80px;
+            }
         }
 
         &-img-second {
@@ -148,6 +223,23 @@
             right: 20%;
             top: 23%;
             z-index: -1;
+            @include media(1350){
+                right: 29%;
+                top: auto;
+                bottom: 200px;
+            }
+            @include media(768){
+                left: 60%;
+                transform: translateX(-50%); 
+                top: auto;
+                bottom: 130px;
+                width: 80px;
+                height: 80px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
         }
 
         &-img-third {
@@ -155,25 +247,50 @@
             right: 0;
             top: 10%;
             z-index: -1;
+            @include media(1350){
+                display: none;
+            }
         }
 
         &-title {
             width: 50%;
+            @include media(768){
+                width: 60%;
+            }
+            @include media(400){
+                width: 100%;
+            }
 
             span {
                 font-size: 46px;
                 line-height: 110.4%;
                 @extend CirceBold;
+                @include media(768){
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 110.4%;
+                    margin-bottom: 3px;
+                }
             }
         }
 
         &-text {
             width: 50%;
+            @include media(768){
+                width: 60%;
+            }
+            @include media(400){
+                width: 100%;
+            }
 
             span {
                 font-size: 22px;
                 line-height: 26px;
                 color: #CFCFCF;
+                @include media(768){
+                    font-size: 11px;
+                    line-height: 13px;
+                }
             }
         }
     }
@@ -183,6 +300,9 @@
         border: 1px solid #212121;
         padding: 1.875rem 0;
         margin: 4.375rem 0 0;
+        @include media(1350){
+            display: none;
+        }
     }
 
     &__bottom-list {

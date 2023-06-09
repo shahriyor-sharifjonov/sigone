@@ -3,11 +3,17 @@
     width: 100%;
     padding-top: 130px;
     overflow: hidden;
+    @include media(576){
+        padding-top: 100px;
+    }
 
     .main-title {
         text-align: center;
         margin-bottom: 50px;
         color: #fff;
+        @include media(576){
+            margin-bottom: 40px;
+        }
     }
 
     &__title {
@@ -19,6 +25,11 @@
         color: #FF0000;
         margin-bottom: 20px;
         @extend CirceBold;
+        @include media(576){
+            font-size: 20px;
+            line-height: 19px;
+            margin-bottom: 0;
+        }
     }
 
     &__swiper {
@@ -27,6 +38,10 @@
 
         .swiper-wrapper{
             height: 500px !important;
+            @include media(576){
+                height: max-content !important;
+                margin-bottom: 25px;
+            }
         }
 
         &-slide {
@@ -50,6 +65,12 @@
             opacity: 1;
             margin-top: 0;
 
+            @include media(992){
+                .speakers__about{
+                    display: flex;
+                }
+            }
+
             img {
                 box-shadow: 0px 4px 150px rgba(255, 0, 28, 0.3);
             }
@@ -68,6 +89,9 @@
             justify-content: center;
             align-items: center;
             gap: 12px;
+            @include media(576){
+                gap: 5px;
+            }
         }
 
         .swiper-pagination-bullet {
@@ -77,8 +101,12 @@
             width: 13px;
             height: 13px;
             border-radius: 50%;
-            // transition: 300ms ease-out;
             cursor: pointer;
+            @include media(576){
+                width: 6px;
+                height: 6px;
+                min-width: 6px;
+            }
         }
 
         .swiper-pagination-bullet-active {
@@ -86,6 +114,11 @@
             width: 20px;
             height: 20px;
             min-width: 20px;
+            @include media(576){
+                width: 9px;
+                height: 9px;
+                min-width: 9px;
+            }
         }
 
         .swiper-slide-shadow-left {
@@ -104,6 +137,17 @@
         justify-content: center;
         flex-direction: column;
         margin-bottom: 5rem;
+        @include media(992){
+            display: none;
+        }
+        @include media(576){
+            margin-bottom: 0;
+        }
+        .speakers__title{
+            @include media(576){
+                margin-bottom: 20px;
+            }
+        }
     }
 
     &__text {
@@ -114,6 +158,12 @@
         text-align: center;
         letter-spacing: 0.780675px;
         @extend CirceBold;
+
+        @include media(576){
+            font-size: 16px;
+            flex-basis: 100%;
+            max-width: 100%
+        }
 
         span {
             @extend CirceBold;
@@ -141,5 +191,8 @@
         @extend CirceBold;
         pointer-events: none;
         -webkit-text-stroke: 1.5px #1B1B1C;
+        @include media(992){
+            display: none;
+        }
     }
 }

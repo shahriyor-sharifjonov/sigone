@@ -2,20 +2,29 @@
     position: relative;
     padding-top: 130px;
     padding-bottom: 130px;
+    @include media(576){
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 
     .accordion {
         --bs-accordion-color: #212529;
-        --bs-accordion-bg: #0a0a0b;
+        --bs-accordion-bg: transparent;
         --bs-accordion-border-color: transparent;
         padding-top: 70px;
+        @include media(576){
+            padding-top: 40px;
+        }
     }
 
     .accordion-item {
         border: none;
         border-top: 1px solid #DFDFDF;
         border-radius: 0;
-        padding-bottom: 1.2917rem;
         position: relative;
+        &:not(:last-of-type){
+            padding-bottom: 1.2917rem;
+        }
     }
  
     .accordion-button {
@@ -34,7 +43,7 @@
 
         &::after {
             background-image: url(../img/plus.svg);
-            background-color: #100D0F;
+            background-color: #0c0c0e;
             border-radius: 50%;
             padding: 8px;
             width: 40px;
