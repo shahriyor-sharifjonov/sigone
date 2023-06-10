@@ -10,6 +10,19 @@
     &:active{
         outline: none;
     }
+
+	&::-webkit-scrollbar {
+		width: 8px;
+	}
+	
+	&::-webkit-scrollbar-track {
+		background: #fafafa;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		border: 0px solid #fafafa;
+		background: linear-gradient(180deg, #FF0000 -6.04%, #310000 139.01%);
+	}
 }
 html,
 body{
@@ -22,8 +35,24 @@ body{
 	overflow-x: hidden;
 	background: #0c0c0e;
 }
-.about-page{
-    background: #0c0c0e;
+.popup{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	isolation: isolate;
+	transition: 300ms ease-out;
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 7000;
+	&.active{
+		opacity: 1;
+		visibility: visible;
+	}
 }
 .wrapper{
     min-height: 100%;
