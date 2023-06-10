@@ -122,6 +122,9 @@
             border-top: 2px solid $white;
             border-right: 2px solid $white;
             transform: rotate(135deg);
+            @include media(992){
+                left: 0;
+            }
         }
     }
 }

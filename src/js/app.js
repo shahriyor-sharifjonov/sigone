@@ -21,119 +21,141 @@ const updateProgress = (instance) => {
 //   loader.innerHTML = prc + "%";
 };
 
+window.onload = function() {
+  setTimeout(() => {
+    document.querySelector('#popup').classList.add('active');
+  }, 10000)
+}
+
 const popupFunctionality = () => {
   const popups = document.querySelectorAll('.popup');
   const popupOpenButtons = document.querySelectorAll('.popup-open');
   const popupCloseButtons = document.querySelectorAll('.popup-close');
-  
+
   popupOpenButtons.forEach(button => {
     button.addEventListener('click', () => {
       const target = document.querySelector(button.getAttribute('data-target'));
-      target.classList.add('active') 
-      if(button.classList.contains('speakers__btn')){
-        button.parentElement.parentElement.classList.add('popup-active')
-        const slides = [...document.querySelector('.popup-active').parentElement.querySelectorAll('.swiper-slide')].filter(el => !el.classList.contains('swiper-slide-duplicate'))
-        const prevButton = document.querySelector('.speakers-popup__prev')
-        const nextButton = document.querySelector('.speakers-popup__next')
-        renderPopupContent()
-        renderPopupPagination()
+      target.classList.add('active');
+      if (button.classList.contains('speakers__btn')) {
+        button.parentElement.parentElement.classList.add('popup-active');
+        const slides = [...document.querySelector('.popup-active').parentElement.querySelectorAll('.swiper-slide')].filter(el => !el.classList.contains('swiper-slide-duplicate'));
+        const prevButton = document.querySelector('.speakers-popup__prev');
+        const nextButton = document.querySelector('.speakers-popup__next');
 
-        const bullets = document.querySelectorAll('.speakers-popup__bullet')
+        renderPopupContent();
+        renderPopupPagination();
+
+        const bullets = document.querySelectorAll('.speakers-popup__bullet');
         bullets.forEach(bullet => {
           bullet.addEventListener('click', () => {
-            const i = bullet.getAttribute('data-bullet-index')
-            document.querySelector('.popup-active').classList.remove('popup-active')
-            slides.filter(el => el.getAttribute('data-swiper-slide-index') == i)[0].classList.add('popup-active')
-            renderPopupContent()
-            updatePopupPagination()
-          })
-        })
+            const i = bullet.getAttribute('data-bullet-index');
+            document.querySelector('.popup-active').classList.remove('popup-active');
+            slides.filter(el => el.getAttribute('data-swiper-slide-index') == i)[0].classList.add('popup-active');
+            renderPopupContent();
+            updatePopupPagination();
+          });
+        });
 
-        prevButton.addEventListener('click', () => {
+        nextButton.addEventListener('click', handleNextButtonClick);
+        prevButton.addEventListener('click', handlePrevButtonClick);
+
+        popupCloseButtons.forEach(button => {
+          button.addEventListener('click', handleCloseButtonClick);
+        });
+
+        function handleNextButtonClick() {
+          changeSlide(1);
+        }
+
+        function handlePrevButtonClick() {
+          changeSlide(-1);
+        }
+
+        function handleCloseButtonClick() {
+          const popupActive = document.querySelector('.popup-active');
+          if (popupActive) {
+            popupActive.classList.remove('popup-active');
+            nextButton.removeEventListener('click', handleNextButtonClick);
+            prevButton.removeEventListener('click', handlePrevButtonClick);
+            popupCloseButtons.forEach(button => {
+              button.removeEventListener('click', handleCloseButtonClick);
+            });
+          }
+        }
+
+        function changeSlide(direction) {
           const active = document.querySelector('.popup-active');
           const index = Number(active.getAttribute('data-swiper-slide-index'));
-          let prevSlide = slides.filter(el => el.getAttribute('data-swiper-slide-index') == index - 1)[0];
+          let nextIndex = index + direction;
 
-          if (index === 0) {
-            prevSlide = slides.filter(el => el.getAttribute('data-swiper-slide-index') == slides.length - 1)[0];
+          if (nextIndex < 0) {
+            nextIndex = slides.length - 1;
+          } else if (nextIndex >= slides.length) {
+            nextIndex = 0;
           }
 
-          active.classList.remove('popup-active');
-          prevSlide.classList.add('popup-active');
-          renderPopupContent()
-          updatePopupPagination()
-        })
-
-        nextButton.addEventListener('click', () => {
-          const active = document.querySelector('.popup-active');
-          const index = Number(active.getAttribute('data-swiper-slide-index'));
-          let nextSlide = slides.filter(el => el.getAttribute('data-swiper-slide-index') == index + 1)[0];
-
-          if (index === slides.length - 1) {
-            nextSlide = slides.filter(el => el.getAttribute('data-swiper-slide-index') == '0')[0];
-          }
+          const nextSlide = slides.find(el => el.getAttribute('data-swiper-slide-index') == nextIndex);
 
           active.classList.remove('popup-active');
           nextSlide.classList.add('popup-active');
-          renderPopupContent()
-          updatePopupPagination()
-        })
+
+          renderPopupContent();
+          updatePopupPagination();
+        }
       }
-    })
-  })
-  
+    });
+  });
+
   popupCloseButtons.forEach(button => {
     button.addEventListener('click', () => {
-      document.querySelectorAll('.popup-active').forEach(a => {
-        a.classList.remove('popup-active')
-      })
       popups.forEach(popup => {
-        popup.classList.remove('active')
-      })
-    })
-  })
+        popup.classList.remove('active');
+      });
+    });
+  });
 
   const renderPopupPagination = () => {
-    const pagination = document.querySelector('.speakers-popup__pagination')
-    pagination.innerHTML = ''
-    const slides = [...document.querySelector('.popup-active').parentElement.querySelectorAll('.swiper-slide')].filter(el => !el.classList.contains('swiper-slide-duplicate'))
+    const pagination = document.querySelector('.speakers-popup__pagination');
+    pagination.innerHTML = '';
+    const slides = [...document.querySelector('.popup-active').parentElement.querySelectorAll('.swiper-slide')].filter(el => !el.classList.contains('swiper-slide-duplicate'));
     for (let i = 0; i < slides.length; i++) {
-      const bullet = document.createElement('button')
-      pagination.appendChild(bullet)
-      if(i == document.querySelector('.popup-active').getAttribute('data-swiper-slide-index')){
-        bullet.classList.add('active')
+      const bullet = document.createElement('button');
+      pagination.appendChild(bullet);
+      if (i == document.querySelector('.popup-active').getAttribute('data-swiper-slide-index')) {
+        bullet.classList.add('active');
       }
-      bullet.classList.add('speakers-popup__bullet')
-      bullet.setAttribute('data-bullet-index', i)
+      bullet.classList.add('speakers-popup__bullet');
+      bullet.setAttribute('data-bullet-index', i);
     }
-  }
+  };
 
   const updatePopupPagination = () => {
-    const pagination = document.querySelector('.speakers-popup__pagination')
-    const bullets = pagination.querySelectorAll('.speakers-popup__bullet')
-    const slides = [...document.querySelector('.popup-active').parentElement.querySelectorAll('.swiper-slide')].filter(el => !el.classList.contains('swiper-slide-duplicate'))
-    bullets.forEach(bullet => bullet.classList.remove('active'))
+    const pagination = document.querySelector('.speakers-popup__pagination');
+    const bullets = pagination.querySelectorAll('.speakers-popup__bullet');
+    const slides = [...document.querySelector('.popup-active').parentElement.querySelectorAll('.swiper-slide')].filter(el => !el.classList.contains('swiper-slide-duplicate'));
+    bullets.forEach(bullet => bullet.classList.remove('active'));
     for (let i = 0; i < slides.length; i++) {
-      if(i == document.querySelector('.popup-active').getAttribute('data-swiper-slide-index')){
-        bullets[i].classList.add('active')
+      if (i == document.querySelector('.popup-active').getAttribute('data-swiper-slide-index')) {
+        bullets[i].classList.add('active');
       }
     }
-  }
+  };
 
   const renderPopupContent = () => {
-    const active = document.querySelector('.popup-active')
-    const title = active.querySelector('.speakers__title')
-    const text = active.querySelector('.speakers__more-info')
-    const img = active.querySelector('img')
-    const popupTitle = document.querySelector('.speakers-popup__title')
-    const popupText = document.querySelector('.speakers-popup__p')
-    const popupImg = document.querySelector('.speakers-popup__img-content img')
+    console.log('render');
+    const active = document.querySelector('.popup-active');
+    const title = active.querySelector('.speakers__title');
+    const text = active.querySelector('.speakers__more-info');
+    const img = active.querySelector('img');
+    const popupTitle = document.querySelector('.speakers-popup__title');
+    const popupText = document.querySelector('.speakers-popup__p');
+    const popupImg = document.querySelector('.speakers-popup__img-content img');
 
-    popupTitle.innerHTML = title.textContent
-    popupText.innerHTML = text.innerHTML
-    popupImg.setAttribute('src', img.getAttribute('src'))
-  }
-}
+    popupTitle.innerHTML = title.textContent;
+    popupText.innerHTML = text.innerHTML;
+    popupImg.setAttribute('src', img.getAttribute('src'));
+  };
+};
 
 
 if(document.querySelector('.footer__anchore')){
