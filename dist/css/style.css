@@ -2262,6 +2262,12 @@ ul {
 
 .speakers__swiper-slide img {
   border-radius: 50%;
+  width: 231px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border: 8px solid rgba(255, 255, 255, 0.41);
   height: 231px;
 }
 
@@ -3206,7 +3212,8 @@ ul {
   top: 50%;
   left: 50%;
   width: 100%;
-  height: 100%;
+  padding-bottom: 100%;
+  height: 0;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -3232,29 +3239,6 @@ ul {
           align-items: center;
 }
 
-.expected-skills__list.active {
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
-  will-change: transform;
-  height: 500px;
-}
-
-.expected-skills__list.active .expected-skills__circle {
-  padding: 0px 5rem;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
-  width: 440px;
-  height: 440px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 220px;
-  will-change: transform;
-}
-
 .expected-skills__circle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3273,12 +3257,6 @@ ul {
   -webkit-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
-  will-change: transform;
-}
-
-.expected-skills__circle:hover {
-  scale: 1.05;
-  cursor: pointer;
   will-change: transform;
 }
 
@@ -3481,54 +3459,6 @@ ul {
 
 .expected-skills__info-button {
   position: absolute;
-}
-
-.expected-skills__item {
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
-}
-
-.expected-skills__item.active {
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
-}
-
-.expected-skills__item.active .expected-skills__circle {
-  z-index: 10;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
-  width: 500px;
-  height: 500px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 200px;
-}
-
-.expected-skills__item.active .expected-skills__circle .expected-skills__circle-title span {
-  font-size: 46px;
-  line-height: 120%;
-}
-
-.expected-skills__item.active .expected-skills__circle .expected-skills__circle-text span {
-  font-size: 16px;
-  line-height: 120%;
-}
-
-.expected-skills__item.active .expected-skills__info {
-  opacity: 1;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
-  scale: 1;
-  top: 50%;
-  -webkit-transform: translateY(-40%);
-      -ms-transform: translateY(-40%);
-          transform: translateY(-40%);
 }
 
 .percent-way {
@@ -4365,6 +4295,83 @@ ul {
   .container {
     max-width: 1320px;
   }
+
+  .expected-skills__list.active {
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    will-change: transform;
+    height: 500px;
+  }
+
+  .expected-skills__list.active .expected-skills__circle {
+    padding: 0px 5rem;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    width: 440px;
+    height: 440px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 220px;
+    will-change: transform;
+  }
+
+  .expected-skills__circle:hover {
+    scale: 1.05;
+    cursor: pointer;
+    will-change: transform;
+  }
+
+  .expected-skills__item {
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
+
+  .expected-skills__item.active {
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
+
+  .expected-skills__item.active .expected-skills__circle {
+    z-index: 10;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 200px;
+  }
+
+  .expected-skills__item.active .expected-skills__circle .expected-skills__circle-title span {
+    font-size: 46px;
+    line-height: 120%;
+  }
+
+  .expected-skills__item.active .expected-skills__circle .expected-skills__circle-text span {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .expected-skills__item.active .expected-skills__info {
+    opacity: 1;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    scale: 1;
+    top: 50%;
+    -webkit-transform: translateY(-40%);
+        -ms-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
 }
 
 @media (max-width: 1700px) {
@@ -4419,6 +4426,54 @@ ul {
 
   .recording .form__button {
     margin-top: 30px;
+  }
+
+  .expected-skills .expected-skills-bg.active {
+    top: 50%;
+    left: 50%;
+  }
+
+  .expected-skills__list {
+    height: -webkit-max-content !important;
+    height: -moz-max-content !important;
+    height: max-content !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+  }
+
+  .expected-skills__item {
+    -webkit-transition: 300ms ease-out;
+    -o-transition: 300ms ease-out;
+    transition: 300ms ease-out;
+    scale: 0.8;
+    opacity: 0.5;
+  }
+
+  .expected-skills__item.expected-skills__item_active {
+    scale: 1;
+    opacity: 1;
+  }
+
+  .expected-skills__circle {
+    position: static;
+    max-width: 100%;
+    width: 370px;
+    height: 370px;
+  }
+
+  .expected-skills__circle-title span {
+    font-size: 20px !important;
+  }
+
+  .expected-skills__circle-text span {
+    font-size: 12px !important;
+  }
+
+  .expected-skills__info {
+    display: none;
   }
 
   .percent-way__item span {
@@ -4563,6 +4618,10 @@ ul {
   }
 
   .decorative {
+    display: none;
+  }
+
+  .speakers__text-bg {
     display: none;
   }
 
@@ -4715,10 +4774,6 @@ ul {
   }
 
   .speakers__about {
-    display: none;
-  }
-
-  .speakers__text-bg {
     display: none;
   }
 
@@ -5347,6 +5402,33 @@ ul {
 
   .training-program .accordion {
     padding-top: 40px;
+  }
+
+  .expected-skills {
+    padding-bottom: 100px;
+  }
+
+  .expected-skills .main-title {
+    margin-bottom: 40px;
+  }
+
+  .expected-skills__item {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+  }
+
+  .expected-skills__circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .expected-skills__circle-num span {
+    font-size: 94px;
   }
 
   .percent-way {

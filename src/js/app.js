@@ -212,6 +212,31 @@ const showDemo = () => {
       );
     })
 
+    matchMedia.add("(max-width: 1400px)", () => {
+      const leaveItem = gsap.utils.toArray(".expected-skills__item");
+      const leaveActive = gsap.utils.toArray(".expected-skills__item");
+      leaveActive.forEach((panel, i) => {
+        ScrollTrigger.create({
+          trigger: panel,
+          start: "top center",
+          end: "bottom center",
+  
+          onEnter: () => {
+            leaveItem.forEach((e) => {
+              e.classList.remove("expected-skills__item_active");
+            });
+            leaveItem[i].classList.add("expected-skills__item_active");
+          },
+          onEnterBack: () => {
+            leaveItem.forEach((e) => {
+              e.classList.remove("expected-skills__item_active");
+            });
+            leaveItem[i].classList.add("expected-skills__item_active");
+          },
+        });
+      });
+    })
+
     matchMedia.add("(max-width: 1200px)", () => {
       const leaveItem = gsap.utils.toArray(".leave__link");
       const leaveActive = gsap.utils.toArray(".leave__link");

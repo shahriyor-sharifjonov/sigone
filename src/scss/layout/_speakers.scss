@@ -57,6 +57,10 @@
 
             img {
                 border-radius: 50%;
+                width: 231px;
+                object-fit: cover;
+                box-sizing: content-box;
+                border: 8px solid rgba(255, 255, 255, 0.41);
                 height: 231px;
             }
         }
@@ -191,7 +195,7 @@
         @extend CirceBold;
         pointer-events: none;
         -webkit-text-stroke: 1.5px #1B1B1C;
-        @include media(992){
+        @include media(1200){
             display: none;
         }
     }

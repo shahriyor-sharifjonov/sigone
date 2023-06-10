@@ -1,9 +1,15 @@
 .expected-skills {
     position: relative;
     padding-bottom: 130px;
+    @include media(576){
+        padding-bottom: 100px;
+    }
 
     .main-title{
         margin-bottom: 70px; 
+        @include media(576){
+            margin-bottom: 40px;
+        }
     }
 
     .expected-skills-bg {
@@ -25,6 +31,10 @@
     .expected-skills-bg.active {
         top: 60%;
         left: 60%;
+        @include media(1400){
+            top: 50%;
+            left: 50%;
+        }
 
         img {
             object-fit: contain;
@@ -44,7 +54,8 @@
         top: 50%;
         left: 50%;
         width: 100%;
-        height: 100%;
+        padding-bottom: 100%;
+        height: 0;
         transform: translate(-50%, -50%);
 
         img {
@@ -60,22 +71,47 @@
         will-change: transform;
         display: flex;
         align-items: center;
+        @include media(1400){
+            height: max-content !important;
+            flex-direction: column;
+            gap: 0;
+        }
 
         &.active {
-            transition: all 1s;
-            will-change: transform;
-            height: 500px;
-
-            .expected-skills__circle {
-                padding: 0px 5rem;
+            @media (min-width: 1400px){
                 transition: all 1s;
-                width: 440px;
-                height: 440px;  
-                top: 50%;
-                transform: translateY(-50%);
-                right: 220px; 
                 will-change: transform;
+                height: 500px;
+    
+                .expected-skills__circle {
+                    padding: 0px 5rem;
+                    transition: all 1s;
+                    width: 440px;
+                    height: 440px;  
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 220px; 
+                    will-change: transform;
+                }
             }
+        }
+    }
+
+    &__item {
+        @include media(1400){
+            transition: 300ms ease-out;
+            &.expected-skills__item_active{
+                scale: 1;
+                opacity: 1;
+            }
+            scale: 0.8;
+            opacity: 0.5;
+        }
+        @include media(576){
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+            position: relative;
         }
     }
 
@@ -88,10 +124,27 @@
         transition: all 1s;
         will-change: transform;
 
-        &:hover {
-            scale: (1.05);
-            cursor: pointer;
-            will-change: transform;
+        @include media(1400){
+            position: static;
+            max-width: 100%;
+            width: 370px;
+            height: 370px;
+        }
+        
+        @include media(576){
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (min-width: 1400px){
+            &:hover {
+                scale: (1.05);
+                cursor: pointer;
+                will-change: transform;
+            }
         }
 
         &-num {
@@ -108,6 +161,9 @@
                 -webkit-text-fill-color: transparent;
                 color: $white;
                 @extend CirceExtraBold;
+                @include media(576){
+                    font-size: 94px;
+                }
             }
         }
 
@@ -117,6 +173,9 @@
                 text-transform: capitalize;
                 line-height: 1rem;
                 @extend CirceBold; 
+                @include media(1400){
+                    font-size: 20px !important;
+                }
             }
         }
 
@@ -126,6 +185,9 @@
                 line-height: 13px;
                 color: #DBDBDB; 
                 text-align: center;
+                @include media(1400){
+                    font-size: 12px !important;
+                }
             }
         }
 
@@ -270,6 +332,10 @@
         width: 40%;
         will-change: transform;
 
+        @include media(1400){
+            display: none;
+        }
+
         &-num {
             position: absolute;
             top: -10rem;
@@ -313,41 +379,43 @@
     }
 
     &__item {
-        transition: all 1s;
-
-        &.active {
+        @media (min-width: 1400px){
             transition: all 1s;
 
-            .expected-skills__circle {
-                z-index: 10;
+            &.active {
                 transition: all 1s;
-                width: 500px;
-                height: 500px; 
-                top: 50%;
-                transform: translateY(-50%);
-                right: 200px; 
-                
-                .expected-skills__circle-title{
-                    span{
-                        font-size: 46px;
-                        line-height: 120%; 
-                    }
-                }
 
-                .expected-skills__circle-text{
-                    span{
-                        font-size: 16px;
-                        line-height: 120%;
+                .expected-skills__circle {
+                    z-index: 10;
+                    transition: all 1s;
+                    width: 500px;
+                    height: 500px; 
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 200px; 
+                    
+                    .expected-skills__circle-title{
+                        span{
+                            font-size: 46px;
+                            line-height: 120%; 
+                        }
                     }
-                }
-            } 
 
-            .expected-skills__info {
-                opacity: 1;
-                transition: all 1s;
-                scale: (1);
-                top: 50%; 
-                transform: translateY(-40%);
+                    .expected-skills__circle-text{
+                        span{
+                            font-size: 16px;
+                            line-height: 120%;
+                        }
+                    }
+                } 
+
+                .expected-skills__info {
+                    opacity: 1;
+                    transition: all 1s;
+                    scale: (1);
+                    top: 50%; 
+                    transform: translateY(-40%);
+                }
             }
         }
     }
